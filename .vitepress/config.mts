@@ -10,10 +10,9 @@ export default defineConfig({
     theme: 'one-dark-pro'
     // lineNumbers: true
   },
-  outDir: './public',
-  srcDir: './src',
+  srcDir: 'src',
   themeConfig: {
-    logo: './dimo.png',
+    logo: '/dimo.png',
     nav: [
       { text: '文档', link: '/intro' },
       { text: '插件', link: '/plugin/' },

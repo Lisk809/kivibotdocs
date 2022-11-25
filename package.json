@@ -4,9 +4,9 @@
   "private": true,
   "description": "Documentation for KiviBot.",
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:serve": "vitepress serve"
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
   },
   "keywords": [],
   "author": "Viki <hi@viki.moe> (https://github.com/vikiboss)",
