@@ -1,0 +1,30 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Documentation for KiviBot.",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:serve": "vitepress serve"
+  },
+  "keywords": [],
+  "author": "Viki <hi@viki.moe> (https://github.com/vikiboss)",
+  "license": "MIT",
+  "repository": "KiviBotLab/docs",
+  "homepage": "https://github.com/KiviBotLab/docs#readme",
+  "bugs": {
+    "url": "https://github.com/KiviBotLab/docs/issues"
+  },
+  "dependencies": {
+    "vitepress": "1.0.0-alpha.29",
+    "vue": "^3.2.45"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  }
+}
