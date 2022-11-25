@@ -45,7 +45,7 @@ export default defineConfig({
         text: '开始',
         collapsible: true,
         items: [
-          { text: '框架简介', link: '/intro' },
+          { text: '简介', link: '/intro' },
           {
             text: '安装',
             link: '/guide/start/',
@@ -59,7 +59,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '命令说明',
+        text: '命令',
         collapsible: true,
         items: [
           { text: '消息命令', link: '/guide/cmd/msg' },
