@@ -81,7 +81,7 @@ export default defineConfig({
         items: [
           { text: '前置知识', link: '/develop/prerequisite' },
           { text: '开发指引', link: '/develop/guide' },
-          { text: '插件生命周期', link: '/develop/prerequisite' },
+          { text: '插件生命周期', link: '/develop/lifecycle' },
           { text: '开发技巧', link: '/develop/tricks' },
           { text: '示例插件', link: '/develop/examples' }
         ]
@@ -90,8 +90,8 @@ export default defineConfig({
         text: 'API 文档',
         collapsible: true,
         items: [
-          { text: 'Bot API', link: '/develop/guide' },
-          { text: 'OICQ 事件', link: '/develop/tricks' }
+          { text: 'Bot API', link: '/api/bot' },
+          { text: 'OICQ 事件', link: '/api/events' }
         ]
       }
     ],
