@@ -26,5 +26,8 @@
         "@algolia/client-search"
       ]
     }
+  },
+  "devDependencies": {
+    "less": "^4.1.3"
   }
 }
