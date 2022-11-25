@@ -1,4 +1,4 @@
-# KiviBot 简介 {#KiviBot}
+# 简介 {#KiviBot}
 
 [![npm (scoped)](https://img.shields.io/npm/v/@kivibot/core?color=527dec&label=%40kivibot%2Fcore&style=flat-square)](https://www.npmjs.com/package/@kivibot/core)
 [![npm (scoped)](https://img.shields.io/npm/v/kivibot?color=527dec&label=kivibot&style=flat-square)](https://www.npmjs.com/package/kivibot)
@@ -7,7 +7,7 @@
 框架仍处于测试阶段，可能会有较多 `bug`。
 :::
 
-使用 [TypeScript](https://www.typescriptlang.org/) 语言编写的 **轻量**、**跨平台** QQ 机器人框架。
+`KiviBot` 是使用 [TypeScript](https://www.typescriptlang.org/) 语言编写的 **轻量**、**跨平台** QQ 机器人框架。
 
 提供完备的状态监控、插件管理（支持热更新）、管理员机制、通知和请求处理以及友好的脚手架，全部开箱即用。框架开源可扩展，插件开发简单。核心协议基于 [oicq2](https://github.com/takayama-lily/oicq)，API 众多，功能强大。框架使用 [node](https://nodejs.org/) 驱动（要求 node 版本 >= 14），得益于强大的 `v8` 引擎，框架性能可观。
 
@@ -33,7 +33,7 @@
 
 ## 插件示例
 
-仅需编写少量 `JavaScript` 代码即可实现丰富功能，参考下面的 Demo。
+仅需编写少量 JavaScript 代码即可实现丰富功能，参考下面的 Demo。
 
 ```js
 const { KiviPlugin } = require('@kivibot/core')

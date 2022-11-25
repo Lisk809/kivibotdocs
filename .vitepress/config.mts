@@ -59,11 +59,12 @@ export default defineConfig({
         ]
       },
       {
-        text: '命令',
+        text: '命令和配置',
         collapsible: true,
         items: [
           { text: '消息命令', link: '/guide/cmd/msg' },
-          { text: 'CLI 命令', link: '/guide/cmd/cli' }
+          { text: 'CLI 命令', link: '/guide/cmd/cli' },
+          { text: 'kivi.json', link: '/guide/cmd/kivi' },
         ]
       },
       {
