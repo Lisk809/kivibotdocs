@@ -95,7 +95,7 @@ export default defineConfig({
         collapsible: true,
         items: [
           { text: 'Bot API', link: '/api/bot' },
-          { text: 'OICQ 事件', link: '/api/events' }
+          { text: 'oicq 事件', link: '/api/events' }
         ]
       }
     ],
