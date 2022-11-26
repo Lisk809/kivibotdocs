@@ -53,7 +53,7 @@ export default defineConfig({
               { text: 'Linux', link: '/guide/start/linux' },
               { text: 'Windows', link: '/guide/start/win' },
               { text: 'Android (Termux)', link: '/guide/start/android' },
-              { text: 'iOS (iSH)', link: '/guide/start/ios' }
+              { text: 'iOS', link: '/guide/start/ios' }
             ]
           },
           {
