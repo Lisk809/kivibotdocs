@@ -122,7 +122,7 @@
 }
 ```
 
-## `Kivi.json` 简略例子
+## `kivi.json` 简略例子
 
 ```json
 {
