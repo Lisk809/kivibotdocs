@@ -1,5 +1,14 @@
 ---
 layout: home
+titleTemplate: 轻量、跨平台的 QQ 机器人框架
+description: 轻量、跨平台的 QQ 机器人框架
+head:
+  - - meta
+    - name: description
+      content: 轻量、跨平台的 QQ 机器人框架
+  - - meta
+    - name: keywords
+      content: KiviBot,kivibot,QQ机器人,机器人框架,机器人,bot
 hero:
   name: KiviBot
   text: 轻量、跨平台的 QQ 机器人框架

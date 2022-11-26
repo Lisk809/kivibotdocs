@@ -1,4 +1,4 @@
-# 简介 {#KiviBot}
+# KiviBot 简介 {#KiviBot}
 
 [![npm (scoped)](https://img.shields.io/npm/v/@kivibot/core?color=527dec&label=%40kivibot%2Fcore&style=flat-square)](https://www.npmjs.com/package/@kivibot/core)
 [![npm (scoped)](https://img.shields.io/npm/v/kivibot?color=527dec&label=kivibot&style=flat-square)](https://www.npmjs.com/package/kivibot)

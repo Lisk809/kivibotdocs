@@ -15,10 +15,10 @@ export default defineConfig({
     logo: '/dimo.png',
     nav: [
       { text: '文档', link: '/intro' },
-      { text: '插件', link: '/plugin/' },
+      { text: '插件', link: '/plugin/note' },
       {
         text: '开发',
-        link: '/develop/'
+        link: '/develop/prerequisite'
       },
       // {
       //   text: '文章',
@@ -48,33 +48,35 @@ export default defineConfig({
         items: [
           { text: '简介', link: '/intro' },
           {
-            text: '安装',
-            link: '/guide/start/',
+            text: '起步',
             items: [
               { text: 'Linux', link: '/guide/start/linux' },
               { text: 'Windows', link: '/guide/start/win' },
               { text: 'Android (Termux)', link: '/guide/start/android' },
               { text: 'iOS (iSH)', link: '/guide/start/ios' }
             ]
+          },
+          {
+            text: '命令',
+            items: [
+              { text: '消息命令', link: '/guide/cmd/msg' },
+              { text: 'CLI 命令', link: '/guide/cmd/cli' }
+            ]
+          },
+          {
+            text: '配置文件',
+            link: '/guide/config'
           }
-        ]
-      },
-      {
-        text: '命令和配置',
-        collapsible: true,
-        items: [
-          { text: '消息命令', link: '/guide/cmd/msg' },
-          { text: 'CLI 命令', link: '/guide/cmd/cli' },
-          { text: 'kivi.json', link: '/guide/cmd/kivi' }
         ]
       },
       {
         text: '插件',
         collapsible: true,
         items: [
-          { text: 'npm 插件', link: '/plugin/npm' },
-          { text: '本地插件', link: '/plugin/local' },
-          { text: '插件列表', link: '/plugin/list' }
+          { text: '插件说明', link: '/plugin/note' },
+          { text: '安装插件', link: '/plugin/install' },
+          { text: '官方插件', link: '/plugin/official' },
+          { text: '社区插件', link: '/plugin/third' }
         ]
       },
       {
