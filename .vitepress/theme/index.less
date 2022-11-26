@@ -17,10 +17,12 @@
   .vp-doc {
     & :not(pre) > code {
       font-weight: bold;
+      padding: 1px 1px 4px 1px;
 
       &::before,
       &::after {
         content: '`';
+        opacity: 0.3;
       }
     }
 

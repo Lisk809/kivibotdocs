@@ -20,20 +20,21 @@ export default defineConfig({
         text: '开发',
         link: '/develop/'
       },
-      {
-        text: '文章',
-        items: [
-          { text: '如何发布一个 npm 包', link: '#' },
-          { text: 'ESM 和 CommonJS', link: '#' }
-        ]
-      },
+      // {
+      //   text: '文章',
+      //   items: [
+      //     { text: '如何发布一个 npm 包', link: '#' },
+      //     { text: 'ESM 和 CommonJS', link: '#' }
+      //   ]
+      // },
       {
         text: '社区',
         items: [
           {
             items: [
               { text: 'Discord 群', link: 'https://discord.gg/RegGQD3Fu6' },
-              { text: 'QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=OuXggnBs' }
+              { text: 'QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=OuXggnBs' },
+              { text: 'KiviBot Lab', link: 'https://github.com/KiviBotLab' }
             ]
           },
           { items: [{ text: '支持本项目', link: '/reward' }] }
@@ -64,7 +65,7 @@ export default defineConfig({
         items: [
           { text: '消息命令', link: '/guide/cmd/msg' },
           { text: 'CLI 命令', link: '/guide/cmd/cli' },
-          { text: 'kivi.json', link: '/guide/cmd/kivi' },
+          { text: 'kivi.json', link: '/guide/cmd/kivi' }
         ]
       },
       {
