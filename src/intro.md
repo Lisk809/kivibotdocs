@@ -21,13 +21,13 @@
 
 - 📦 **便携**: 使用 QQ 消息控制机器人，无需远程连接服务器进行操作，快速方便。
 
-- 📱 **跨平台**: 不仅 Windows，Linux，手机和平板 (通过模拟 Linux 环境) 也能运行。
+- 📱 **跨平台**: 不仅 Windows，Linux 能运行，手机和平板 (通过模拟 Linux 环境) 也能运行。
 
 - 🔗 **多协议**: 支持安卓手机、安卓平板、iPad、安卓手表和 MacOS 协议。
 
 - 🚤 **极速开发**: 学习门槛低，只需几行 JS/TS 代码就能编写插件。
 
-- 💻 **开发者友好**: 插件支持热重载，拥有完备的脚手架与 TS 类型定义。
+- 💻 **开发者友好**: 插件支持热重载，拥有友好的脚手架与完备的 TS 类型定义。
 
 更多特征等你探索...
 
@@ -41,7 +41,15 @@ const { KiviPlugin } = require('@kivibot/core')
 const plugin = new KiviPlugin('JS 插件模板', '0.1.0')
 
 plugin.onMounted((bot, admins) => {
-  plugin.onCmd('Hello', (e, args) => e.reply('World')) // [!code hl]
+  plugin.onCmd('Hello', (event, params) => event.reply('World')) // [!code hl]
+
+  plugin.onCmd(['Kivi', /bot/i], (event, params) => event.reply('World')) // [!code hl]
+
+  plugin.onMatch([/Hello/i, 'Hi'], event => event.reply('World')) // [!code hl]
+
+  plugin.cron('10 * * * * *', bot => {
+    bot.sendPrivateMsg(plugin.mainAdmin, 'Cron Task')
+  })
 })
 
 module.exports = plugin
