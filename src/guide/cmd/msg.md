@@ -23,5 +23,6 @@
 | `/config admin rm <qq>`  | 删除机器人管理并立即生效               |
 | `/config notice on`      | 开启机器人消息通知，通知仅通知主管理员 |
 | `/config notice off`     | 关闭机器人消息通知，通知仅通知主管理员 |
+| `/config update`         | 更新依赖和插件                         |
 | `/about`                 | 查看框架介绍                           |
 | `/exit`                  | 退出机器人进程                         |
