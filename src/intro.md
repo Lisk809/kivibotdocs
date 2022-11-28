@@ -61,18 +61,18 @@ plugin.onMounted((bot, admins) => {
     event.reply(JSON.stringify(params) + JSON.stringify(options))
   })
 
-  plugin.onMatch([/morning/i, 'evening'], (event) => {
+  plugin.onMatch([/morning/i, 'evening'], event => {
     event.reply('you too')
   })
 
-  plugin.cron('0,10,20,30,40,50 * * * * *', (bot) => {
+  plugin.cron('0,10,20,30,40,50 * * * * *', bot => {
     bot.sendPrivateMsg(plugin.mainAdmin, 'cron task trigger!')
   })
 
-  plugin.on('message.private', (event) => {
+  plugin.on('message.private', event => {
     event.reply('Hi, I am KiviBot.')
   })
 })
 
-module.exports = plugin
+module.exports = { plugin }
 ```
