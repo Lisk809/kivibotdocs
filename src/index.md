@@ -1,6 +1,6 @@
 ---
 layout: home
-titleTemplate: 轻量、跨平台的 QQ 机器人框架
+titleTemplate: QQ 机器人框架
 description: 轻量、跨平台的 QQ 机器人框架
 head:
   - - meta

@@ -2,7 +2,7 @@
 
 ## 安装 node
 
-略
+到 [node 官网](https://nodejs.org/)进行下载安装
 
 ## 安装脚手架
 
@@ -15,6 +15,8 @@ npm i -g kivibot --registry=https://registry.npmmirror.com/
 ```shell
 kivi init --start
 ```
+
+> 如果二维码显示异常，请尝试手动打开 `data/oicq/qq` 目录下的二维码图片进行扫码。
 
 ## 后台部署
 

@@ -38,11 +38,10 @@
 ```js
 const { KiviPlugin } = require('@kivibot/core')
 
-const plugin = new KiviPlugin('demo', '0.1.0', {
-  enableGroups: [123456]
-})
+const plugin = new KiviPlugin('demo', '0.1.0')
 
 plugin.onMounted((bot, admins) => {
+
   plugin.onMessage((event) => {
     if (event.toString() === 'hello') {
       event.reply('world')
@@ -72,6 +71,7 @@ plugin.onMounted((bot, admins) => {
   plugin.on('message.private', event => {
     event.reply('Hi, I am KiviBot.')
   })
+  
 })
 
 module.exports = { plugin }
