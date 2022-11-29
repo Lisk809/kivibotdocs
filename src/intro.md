@@ -36,15 +36,16 @@
 仅需编写少量 JavaScript 代码即可实现丰富功能，只要你有 JavaScript 语言的基础，上手开发一个插件是非常简单的。参考下面给出的插件 Demo。
 
 ```js
-const { KiviPlugin } = require('@kivibot/core')
+const { KiviPlugin, segment } = require('@kivibot/core')
 
 const plugin = new KiviPlugin('demo', '0.1.0')
 
 plugin.onMounted((bot, admins) => {
+  plugin.onMessage(event => {
+    const message = event.toString()
 
-  plugin.onMessage((event) => {
-    if (event.toString() === 'hello') {
-      event.reply('world')
+    if (message === 'hello') {
+      event.reply([segment.face(66), 'world'])
     }
   })
 
@@ -52,11 +53,13 @@ plugin.onMounted((bot, admins) => {
     event.reply(JSON.stringify(params) + JSON.stringify(options))
   })
 
-  plugin.onCmd(['cmd1', /^cmd2/i], (event, params, options) => {
-    event.reply('cmd1 or /cmd2/i trigger!')
+  plugin.onCmd(['/cmd1', /^\/cmd2/i], (event, params, options) => {
+    event.reply('/cmd1 or /^/cmd2/i trigger!')
   })
 
   plugin.onAdminCmd('/adminCmd', (event, params, options) => {
+    plugin.log(JSON.stringify(params) + JSON.stringify(options))
+
     event.reply(JSON.stringify(params) + JSON.stringify(options))
   })
 
@@ -64,14 +67,16 @@ plugin.onMounted((bot, admins) => {
     event.reply('you too')
   })
 
-  plugin.cron('0,10,20,30,40,50 * * * * *', bot => {
+  plugin.cron('0,20,40 * * * * *', bot => {
     bot.sendPrivateMsg(plugin.mainAdmin, 'cron task trigger!')
   })
 
   plugin.on('message.private', event => {
-    event.reply('Hi, I am KiviBot.')
+    const id = event.sender.user_id
+    const msg = 'receive message from: ' + id
+
+    bot.sendPrivateMsg(plugin.mainAdmin, msg)
   })
-  
 })
 
 module.exports = { plugin }
