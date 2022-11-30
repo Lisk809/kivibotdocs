@@ -86,7 +86,7 @@ oicq 的 `Client` 实例，可以调用各种 Bot API，仅在 `onMounted` 和 `
 
 ```ts
 plugin.onMounted(() => {
-  plugin.log(plugin.bot.uin) // 机器人的 QQ 账号 // [!code focus]
+  plugin.log(plugin.bot.uin) // Bot 的 QQ 账号 // [!code focus]
 })
 ```
 
@@ -158,7 +158,7 @@ const plugin = new kiviPlugin('demo', '0.1.0')
 const config = plugin.loadConfig() // [!code focus]
 
 plugin.onMounted(() => {
-  plugin.saveConfig({ name: 'kiviBot' }) // [!code focus]
+  plugin.saveConfig({ name: 'KiviBot' }) // [!code focus]
 })
 ```
 
@@ -282,7 +282,7 @@ plugin.onMounted(() => {
 **参数说明**：
 
 - `cronExpression`: `string` 类型，必填，`cron` 表达式
-- `handler`: 定时任务函数，默认传入 Bot 实例和机器人管理列表
+- `handler`: 定时任务函数，默认传入 Bot 实例和 Bot 管理员列表
 
 **返回值**: `node-cron` 的 `Task` 实例，可以调用其上的 `stop` 方法取消定时任务。
 
