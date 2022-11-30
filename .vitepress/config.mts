@@ -94,6 +94,7 @@ export default defineConfig({
         text: 'API 文档',
         collapsible: true,
         items: [
+          { text: 'KiviPlugin API', link: '/api/plugin' },
           { text: 'Bot API', link: '/api/bot' },
           { text: 'oicq 事件', link: '/api/events' }
         ]
