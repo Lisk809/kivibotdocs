@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'KiviBot',
-  description: 'Documentation for KivBot.',
+  description: '轻量、跨平台的 QQ 机器人框架',
   head: [['link', { rel: 'icon', type: 'image/png', href: `/dimo.png` }]],
   lastUpdated: true,
   markdown: {
