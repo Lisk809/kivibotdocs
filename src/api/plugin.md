@@ -120,6 +120,46 @@ plugin.onMounted(() => {
 })
 ```
 
+## plugin.onMounted() <Badge type="warning" text="方法" />
+
+插件的生命周期函数，插件被启用时被调用，有关 Bot 实例的方法和逻辑，请写到传入的处理函数里。
+
+函数签名：`onMounted(handler)`
+
+**参数说明**：
+
+- `handler`: 插件被启用的处理函数，必填，默认传入 Bot 实例和 Bot 管理员列表。插件主要逻辑请写在此函数体内。
+
+**无返回值**
+
+```ts
+const plugin = new kiviPlugin('demo', '0.1.0')
+
+plugin.onMounted((bot, admins) => {
+  plugin.log('插件被启用了！') // [!code focus]
+})
+```
+
+## plugin.onUnmounted() <Badge type="warning" text="方法" />
+
+插件的生命周期函数，插件被禁用时被调用，有关 Bot 实例的方法和逻辑，请写到传入的处理函数里。
+
+函数签名：`onUnmounted(handler)`
+
+**参数说明**：
+
+- `handler`: 插件被禁用用的处理函数，必填，默认传入 Bot 实例和 Bot 管理员列表。插件的善后逻辑（关闭连接、内存释放等）请写在此函数体内。
+
+**无返回值**
+
+```ts
+const plugin = new kiviPlugin('demo', '0.1.0')
+
+plugin.onUnmounted((bot, admins) => {
+  plugin.log('插件被禁用了！') // [!code focus]
+})
+```
+
 ## plugin.throwPluginError() <Badge type="warning" text="方法" />
 
 抛出一个 `KiviPluginError` 标准错误，会被框架捕获并输出到控制台日志。
@@ -273,7 +313,7 @@ plugin.onMounted(() => {
 
 ## plugin.cron() <Badge type="warning" text="方法" />
 
-使用 `cron` 语法创建定时消息任务，内部使用 [node-cron](https://github.com/node-cron/node-cron) 实现。
+使用 `cron` 语法创建定时消息任务，内部使用 [node-cron](https://github.com/node-cron/node-cron) 实现。使用此方式添加的定时任务会在插件被禁用时自动取消，无需手动处理。
 
 > `cron` 语法说明参考[这里](https://github.com/node-cron/node-cron#cron-syntax)
 
