@@ -82,7 +82,7 @@ plugin.logger.fatal('致命错误') // [!code focus]
 
 ## plugin.bot <Badge type="warning" text="属性" />
 
-oicq 的 `Client` 实例，可以调用各种 Bot API，仅在 `onMounted` 和 `onUnmounted` 中（即被挂在了之后）才能被访问到
+oicq 的 `Client` 实例，可以调用各种 Bot API，仅在 `onMounted` 和 `onUnmounted` 中（即被挂载了之后）才能被访问到
 
 ```ts
 plugin.onMounted(() => {
