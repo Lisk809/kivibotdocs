@@ -53,3 +53,5 @@ plugin.onMounted(() => {
 
 module.exports = { plugin }
 ```
+
+详细插件 `API` 说明请参阅 [`KiviPlugin API`](/api/plugin)
