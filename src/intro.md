@@ -9,13 +9,13 @@
 
 `KiviBot` 是使用 [TypeScript](https://www.typescriptlang.org/) 语言编写的 **轻量**、**跨平台** QQ 机器人框架。
 
-框架提供了完备的状态监控、插件管理（支持热更新）、主副管理员机制、消息通知、请求处理功能以及友好的脚手架，开箱即用。框架完全开源，可扩展性强，插件开发简单，核心底层协议使用 [oicq2](https://github.com/takayama-lily/oicq)，API 众多，功能强大。另外，框架使用 [node](https://nodejs.org/) 驱动，得益于 `node` 及其高效的 `v8` 引擎，框架性能可观。
+框架提供了完备的状态监控、插件管理（支持热更新）、主副管理员机制、消息通知、请求处理功能以及友好的脚手架，开箱即用。框架完全开源，可扩展性强，插件开发简单，核心底层协议使用 [oicq v2](https://github.com/takayama-lily/oicq)，API 众多，功能强大。另外，框架使用 [node](https://nodejs.org/) 驱动，得益于 node 及其高效的 v8 引擎，KiviBot 的性能可观。
 
 本项目开发初衷在于提高群活跃氛围、方便群管理，仅供个人娱乐、学习和交流使用，**不得将本项目用于任何非法用途**。
 
 ## 为什么选择 KiviBot
 
-- 🚲 **轻量**: 无需运行 UI 界面，内存占用低，约 30-100 MB（取决于设备、群聊数和活跃程度）。
+- 🚲 **轻量**: 无需运行 UI，内存占用低，约 30-100 MB（取决于设备、群聊数和活跃程度）。
 
 - ⚡ **高效**: 框架开发语言和底层协议语言一致，框架依赖少，执行效率高。
 
@@ -35,8 +35,12 @@
 
 仅需编写少量 JavaScript 代码即可实现丰富功能，只要你有 JavaScript 语言的基础，上手开发一个插件是非常简单的。参考下面给出的插件 Demo。
 
+::: warning 请注意
+框架仍处于**测试阶段**，插件的 API 随时可能发生较大更改，请勿用于生产环境。
+:::
+
 ```js
-const { KiviPlugin, segment } = require('@kivibot/core')
+const { KiviPlugin, segment, http } = require('@kivibot/core')
 
 const plugin = new KiviPlugin('demo', '0.1.0')
 

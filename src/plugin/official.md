@@ -1,3 +1,3 @@
 # 官方插件
 
-害没写，等待迁移
+- [小爱同学](https://github.com/KiviBotLab/kivibot-plugin-ai)

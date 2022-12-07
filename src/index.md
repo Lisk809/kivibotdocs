@@ -12,7 +12,7 @@ head:
 hero:
   name: KiviBot
   text: 轻量、跨平台的 QQ 机器人框架
-  tagline: 站在巨人的肩膀上：Node.js、oicq2
+  tagline: 站在巨人的肩膀上：Node.js、oicq v2
   image:
     src: /dimo.png
     alt: KiviBot
