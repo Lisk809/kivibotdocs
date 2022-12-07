@@ -361,18 +361,18 @@ plugin.onMounted(() => {
 
 ## plugin.on() <Badge type="warning" text="方法" />
 
-监听 [`oicq v2` 标准事件](/api/events)，并使用 `hander` 处理。
+监听 [`oicq v2` 标准事件](/api/oicq_events)，并使用 `hander` 处理。
 
 函数签名：`on(eventName, handler)`
 
 ## plugin.off() <Badge type="warning" text="方法" />
 
-取消监听 [`oicq v2` 标准事件](/api/events)。
+取消监听 [`oicq v2` 标准事件](/api/oicq_events)。
 
 函数签名：`off(eventName, handler)`
 
 ## plugin.once() <Badge type="warning" text="方法" />
 
-单次监听 [`oicq v2` 标准事件](/api/events)，并使用 `hander` 处理。
+单次监听 [`oicq v2` 标准事件](/api/oicq_events)，并使用 `hander` 处理。
 
 函数签名：`on(eventName, handler)`
