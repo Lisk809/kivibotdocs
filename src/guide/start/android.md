@@ -17,7 +17,7 @@ pkg up
 pkg install nodejs
 ```
 
-## 安装脚手架
+## 安装 KiviBot
 
 ```shell
 npm i -g kivibot --registry=https://registry.npmmirror.com/
@@ -30,4 +30,4 @@ mkdir ~/bot && cd ~/bot
 kivi init --start
 ```
 
-> 如果二维码显示异常，请尝试手动打开 `data/oicq/qq` 目录下的二维码图片进行扫码。
+> 如果二维码显示异常，请尝试手动打开 `框架目录/data/oicq/[qq]` 目录下的二维码图片进行扫码。

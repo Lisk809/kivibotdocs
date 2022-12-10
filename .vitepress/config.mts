@@ -87,7 +87,7 @@ export default defineConfig({
           { text: '开发指引', link: '/develop/guide' },
           { text: '插件生命周期', link: '/develop/lifecycle' },
           { text: '开发技巧', link: '/develop/tricks' },
-          { text: '示例插件', link: '/develop/examples' }
+          { text: '插件示例', link: '/develop/examples' }
         ]
       },
       {
