@@ -1,3 +1,5 @@
 # 开发指引
 
-待完善，可先参考 [`KiviPlugin API`](/api/plugin)
+> 查看 plugin 所有 API 请参考 [`KiviPlugin API`](/api/plugin)
+
+完善中...

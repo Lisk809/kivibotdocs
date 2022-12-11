@@ -32,9 +32,9 @@ export default defineConfig({
         items: [
           {
             items: [
-              { text: 'Discord 群', link: 'https://discord.gg/RegGQD3Fu6' },
-              { text: 'QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=OuXggnBs' },
-              { text: 'KiviBot Lab', link: 'https://github.com/KiviBotLab' }
+              { text: '加入 Discord 频道', link: 'https://discord.gg/RegGQD3Fu6' },
+              { text: '加入 QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=OuXggnBs' },
+              { text: '前往 KiviBot Lab', link: 'https://github.com/KiviBotLab' }
             ]
           },
           { items: [{ text: '支持本项目', link: '/reward' }] }

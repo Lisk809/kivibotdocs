@@ -13,6 +13,8 @@ outline: false
 
 赞赏采取**自愿**原则，收到的赞赏将用于提高开发者积极性和开发环境。
 
+你的支持就是最大的动力，感谢。
+
 <div style="display: flex; flex-wrap: wrap;">
   <div style="display: flex; align-items: center; flex-direction: column;">
     <img src="https://smms.deno.dev/2022/11/16/X2kFMdaxvSc1V5P.jpg" alt="wxpay" width="160px" style="margin: 24px;"/>
