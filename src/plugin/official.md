@@ -6,6 +6,6 @@
 
 > 插件标识，即：`/plugin add <name>` 里的 `name`，通过这个标识安装 npm 插件。
 
-- [小爱同学](https://github.com/KiviBotLab/kivibot-plugin-ai)，npm 包名：`kivibot-plugin-ai`，插件标识：`ai`
-- [ChatGPT](https://github.com/KiviBotLab/kivibot-plugin-chatgpt)，npm 包名：`kivibot-plugin-chatgpt`，插件标识：`chatgpt`
-- [有道翻译](https://github.com/KiviBotLab/kivibot-plugin-youdao)，npm 包名：`kivibot-plugin-youdao`，插件标识：`youdao`
+- [小爱同学](https://github.com/KiviBotLab/kivibot-plugin-ai)，插件标识：`ai`，npm 包名：`kivibot-plugin-ai`
+- [ChatGPT](https://github.com/KiviBotLab/kivibot-plugin-chatgpt)，插件标识：`chatgpt`，npm 包名：`kivibot-plugin-chatgpt`
+- [有道翻译](https://github.com/KiviBotLab/kivibot-plugin-youdao)，插件标识：`youdao`，npm 包名：`kivibot-plugin-youdao`
