@@ -19,3 +19,9 @@ kivi init --start
 ```
 
 > 如果二维码显示异常，请尝试手动打开 `框架目录/data/oicq/[qq]` 目录下的二维码图片进行扫码。
+
+## 后台部署
+
+```shell
+kivi deploy
+```
