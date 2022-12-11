@@ -257,6 +257,22 @@ plugin.onMounted(() => {
 })
 ```
 
+## plugin.onGroupMessage() <Badge type="warning" text="方法" />
+
+:::info 小提示
+等价于 `plugin.on('message.group', handler)`
+:::
+
+与 `plugin.onMessage()` 类似，只不过只处理群聊消息。
+
+## plugin.onPrivateMessage() <Badge type="warning" text="方法" />
+
+:::info 小提示
+等价于 `plugin.on('message.private', handler)`
+:::
+
+与 `plugin.onMessage()` 类似，只不过只处理私聊消息。
+
 ## plugin.onMatch() <Badge type="warning" text="方法" />
 
 消息匹配函数，传入字符串或正则，或字符串和正则的数组，进行精确匹配，匹配成功则调用函数。
