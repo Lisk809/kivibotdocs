@@ -229,7 +229,7 @@ const plugin = new kiviPlugin('demo', '0.1.0')
 const config = plugin.loadConfig() // [!code focus]
 
 plugin.onMounted(() => {
-  plugin.saveConfig({ name: 'kiviBot' }) // [!code focus]
+  plugin.saveConfig({ name: 'KiviBot' }) // [!code focus]
 })
 ```
 
