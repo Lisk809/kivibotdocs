@@ -20,7 +20,7 @@ pkg install nodejs
 ## 安装 KiviBot
 
 ```shell
-npm i -g kivibot --registry=https://registry.npmmirror.com/
+npm i -g kivibot@latest --registry=https://registry.npmmirror.com/
 ```
 
 ## 生成配置文件并启动
