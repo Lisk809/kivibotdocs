@@ -1,4 +1,4 @@
-# oicq 标准事件
+# oicq v2 标准事件
 
 详情参考 [`oicq v2` 文档](https://oicqjs.github.io/oicq/)的 [`EventMap`](https://oicqjs.github.io/oicq/interfaces/EventMap.html) 定义。
 

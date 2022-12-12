@@ -15,6 +15,22 @@
   }
 
   .vp-doc {
+    #KiviBot + p {
+      margin-bottom: 0;
+
+      img {
+        margin: 0 8px 0 0;
+      }
+
+      & + p {
+        margin: 0;
+
+        img {
+          margin: 0 8px 0 0;
+        }
+      }
+    }
+
     & :not(pre) > code {
       font-weight: bold;
       padding: 1px 1px 4px 1px;
