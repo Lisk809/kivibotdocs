@@ -48,13 +48,17 @@ export default defineConfig({
         items: [
           { text: '简介', link: '/intro' },
           {
-            text: '起步',
+            text: '安装',
             items: [
               { text: 'Linux', link: '/guide/start/linux' },
               { text: 'Windows', link: '/guide/start/win' },
               { text: 'Android (Termux)', link: '/guide/start/android' },
               { text: 'iOS', link: '/guide/start/ios' }
             ]
+          },
+          {
+            text: '基础',
+            link: '/guide/basic'
           },
           {
             text: '命令',
