@@ -1,7 +1,11 @@
 # 安装插件
 
-::: tip 提示
-官方插件均会发布为 npm 插件，使用**消息指令**进行安装时不需要带上 `kivibot-plugin-` 前缀
+::: tip 小提示
+官方插件均会发布为 npm 插件。
+:::
+
+::: danger 请特别注意！
+插件的版本号为 `0.0.0` 表示其仍在开发中，请勿安装。
 :::
 
 - `npm 插件` 通过 `/plugin add <name>` **消息指令**进行安装
@@ -9,8 +13,10 @@
 
 **比如**：
 
-"有道翻译"插件的 npm 包名为 `kivibot-plugin-youdao`，所以他的标识名为 `youdao`，那么你可以这样安装：
+"小爱同学"插件的 npm 包名为 `kivibot-plugin-ai`，那么他的标识名就为 `ai`。
 
-- 安装有道翻译：`/plugin add youdao`
+你可以这样使用：
 
-- 启用有道翻译：`/plugin on youdao`
+- 安装：`/plugin add ai`
+
+- 启用：`/plugin on ai`

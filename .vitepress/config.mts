@@ -63,7 +63,7 @@ export default defineConfig({
           {
             text: '命令',
             items: [
-              { text: '消息命令', link: '/guide/cmd/msg' },
+              { text: '消息指令', link: '/guide/cmd/msg' },
               { text: 'CLI 命令', link: '/guide/cmd/cli' }
             ]
           },
