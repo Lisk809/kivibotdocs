@@ -11,3 +11,4 @@
 - [小爱同学](https://npm.im/kivibot-plugin-ai)，插件标识：`ai`
 - [ChatGPT](https://npm.im/kivibot-plugin-chatgpt)，插件标识：`chatgpt`
 - [有道翻译](https://npm.im/kivibot-plugin-youdao)，插件标识：`youdao`
+- [百度百科](https://npm.im/kivibot-plugin-baike)，插件标识：`baike`
