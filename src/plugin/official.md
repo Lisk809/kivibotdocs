@@ -13,5 +13,6 @@
 - [有道翻译](https://github.com/KiviBotLab/kivibot-plugin-youdao)，插件标识：`youdao`
 - [百度百科](https://github.com/KiviBotLab/kivibot-plugin-baike)，插件标识：`baike`
 - [点歌](https://github.com/KiviBotLab/kivibot-plugin-music)，插件标识：`music`
+- [搜图](https://github.com/KiviBotLab/kivibot-plugin-soutu)，插件标识：`soutu`
 
 > 开发不易，点个不要钱的 star 就是对我们的最大支持。
