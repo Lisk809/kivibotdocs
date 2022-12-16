@@ -14,5 +14,7 @@
 - [百度百科](https://github.com/KiviBotLab/kivibot-plugin-baike)，插件标识：`baike`
 - [点歌](https://github.com/KiviBotLab/kivibot-plugin-music)，插件标识：`music`
 - [搜图](https://github.com/KiviBotLab/kivibot-plugin-soutu)，插件标识：`soutu`
+- [名片点赞](https://github.com/KiviBotLab/kivibot-plugin-like)，插件标识：`like`
+- [战力查询](https://github.com/KiviBotLab/kivibot-plugin-zlcx)，插件标识：`zlcx`
 
 > 开发不易，点个不要钱的 star 就是对我们的最大支持。
