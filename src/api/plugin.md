@@ -65,13 +65,13 @@ const plugin = new kiviPlugin('demo', version)
 
 ## plugin.dataDir <Badge type="warning" text="属性" />
 
-插件数据存放目录，`xxx/data/plugins/[name]`（绝对路径） 注意这里的 `name` 是实例化插件的时候传入的 `name`
+插件数据存放目录，`框架目录/data/plugins/[name]`（绝对路径） 注意这里的 `name` 是实例化插件的时候传入的 `name`
 
 ```ts
 const plugin = new kiviPlugin('demo', '0.1.0')
 
 plugin.onMounted(() => {
-  plugin.log(plugin.dataDir) // xxx/data/plugins/demo
+  plugin.log(plugin.dataDir) // 框架目录/data/plugins/demo
 })
 ```
 
