@@ -54,6 +54,15 @@ plugin.onMounted(() => {
 })
 ```
 
+::: tip 小提示
+建议引入 `package.json` 的版本号作为插件版本以便统一管理，如：
+:::
+
+```js
+const { version } = require('./package.json')
+const plugin = new kiviPlugin('demo', version)
+```
+
 ## plugin.dataDir <Badge type="warning" text="属性" />
 
 插件数据存放目录，`xxx/data/plugins/[name]`（绝对路径） 注意这里的 `name` 是实例化插件的时候传入的 `name`
@@ -201,14 +210,28 @@ plugin.onMounted(() => {
 **返回值**：`boolean` 是否写入成功
 
 ```ts
-const plugin = new kiviPlugin('demo', '0.1.0')
-
-const config = plugin.loadConfig() // [!code focus]
-
 plugin.onMounted(() => {
   plugin.saveConfig({ name: 'KiviBot' }) // [!code focus]
 })
 ```
+
+::: tip 最佳实践
+如果你想设置默认配置的同时也支持用户手动配置，只需在 `onMounted` 中这加上这行：
+:::
+
+```js
+// 插件的默认配置
+const config = {}
+
+plugin.onMounted(() => {
+  // 加载本地配置，并覆盖默认配置（如果有）
+  plugin.saveConfig(Object.assig(config, plugin.loadConfig()))
+
+  // 插件主要逻辑写在这里
+})
+```
+
+> 它会优先加载 `框架目录/data/plugins/[name]/config.json`) 中的配置
 
 ## plugin.loadConfig() <Badge type="warning" text="方法" />
 
@@ -224,14 +247,30 @@ plugin.onMounted(() => {
 **返回值**：解析后的数据对象
 
 ```ts
-const plugin = new kiviPlugin('demo', '0.1.0')
-
 const config = plugin.loadConfig() // [!code focus]
 
 plugin.onMounted(() => {
-  plugin.saveConfig({ name: 'KiviBot' }) // [!code focus]
+  const config = plugin.loadConfig() // [!code focus]
 })
 ```
+
+::: tip 最佳实践
+如果你想设置默认配置的同时也支持用户手动配置，只需在 `onMounted` 中这加上这行：
+:::
+
+```js
+// 插件的默认配置
+const config = {}
+
+plugin.onMounted(() => {
+  // 加载本地配置，并覆盖默认配置（如果有）
+  plugin.saveConfig(Object.assig(config, plugin.loadConfig()))
+
+  // 插件主要逻辑写在这里
+})
+```
+
+> 它会优先加载 `框架目录/data/plugins/[name]/config.json`) 中的配置
 
 ## plugin.onMessage() <Badge type="warning" text="方法" />
 
