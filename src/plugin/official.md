@@ -16,5 +16,6 @@
 - [搜图](https://github.com/KiviBotLab/kivibot-plugin-soutu)，插件标识：`soutu`
 - [名片点赞](https://github.com/KiviBotLab/kivibot-plugin-like)，插件标识：`like`
 - [战力查询](https://github.com/KiviBotLab/kivibot-plugin-zlcx)，插件标识：`zlcx`
+- [天气](https://github.com/KiviBotLab/kivibot-plugin-weather)，插件标识：`weather`
 
 > 开发不易，点个不要钱的 star 就是对我们的最大支持。
