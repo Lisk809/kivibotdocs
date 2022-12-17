@@ -10,7 +10,7 @@
 npm i -g kivibot@latest
 ```
 
-如果速度慢，考虑从国内源安装
+如果速度慢，考虑从国内源安装（仅作备用，可能不是最新版本）
 
 ```shell
 npm i -g kivibot@latest --registry https://registry.npmmirror.com
