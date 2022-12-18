@@ -33,7 +33,7 @@ export default defineConfig({
           {
             items: [
               { text: '加入 Discord 频道', link: 'https://discord.gg/RegGQD3Fu6' },
-              { text: '加入 QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=OuXggnBs' },
+              { text: '加入 QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=iK97X7NS' },
               { text: '前往 KiviBot Lab', link: 'https://github.com/KiviBotLab' }
             ]
           },
