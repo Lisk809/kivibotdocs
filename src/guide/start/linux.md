@@ -16,7 +16,7 @@ npm i -g kivibot@latest
 npm i -g kivibot@latest --registry https://registry.npmmirror.com
 ```
 
-## 通过 CLI  引导生成配置文件
+## 通过 CLI 引导生成配置文件
 
 ```shell
 # 创建空目录作为框架目录，并切换到这个目录

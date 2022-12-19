@@ -1,6 +1,6 @@
 # 在 Windows 平台使用 KiviBot
 
-## 安装 node
+## 安装 Node.js
 
 到 [node 官网](https://nodejs.org/)进行下载安装，建议使用 18 版本，最低不得低于 14 版本。安装时请勾选**将命令加入环境变量**的选项，以确保命令行能够正常访问 `node` 和 `npm` 命令。
 
