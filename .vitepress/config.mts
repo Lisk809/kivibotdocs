@@ -32,12 +32,17 @@ export default defineConfig({
         items: [
           {
             items: [
-              { text: '加入 Discord 频道', link: 'https://discord.gg/RegGQD3Fu6' },
-              { text: '加入 QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=iK97X7NS' },
-              { text: '前往 KiviBot Lab', link: 'https://github.com/KiviBotLab' }
+              { text: 'Discord 频道', link: 'https://discord.gg/RegGQD3Fu6' },
+              { text: 'QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=iK97X7NS' },
+              { text: 'KiviBot Lab', link: 'https://github.com/KiviBotLab' }
             ]
           },
-          { items: [{ text: '支持本项目', link: '/reward' }] }
+          {
+            items: [
+              { text: 'npm 插件列表', link: 'https://npm.im/search?q=kivibot-plugin' },
+              { text: '支持本项目', link: '/reward' }
+            ]
+          }
         ]
       }
     ],
