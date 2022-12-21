@@ -1,14 +1,14 @@
 # KiviBot 简介 {#KiviBot}
 
-[![npm-version](https://img.shields.io/npm/v/@kivibot/core?color=527dec&label=%40kivibot%2Fcore&style=flat-square&labelColor=ffffff&logoColor=cb0000)](https://npm.im/package/@kivibot/core)
-[![dm](https://shields.io/npm/dm/@kivibot/core?label=downloads&style=flat-square&labelColor=ffffff&logoColor=cb0000)](https://npm.im/package/@kivibot/core)
+[![npm-version](https://img.shields.io/npm/v/@kivibot/core?color=527dec&label=%40kivibot%2Fcore&style=flat-square)](https://npm.im/package/@kivibot/core)
+[![dm](https://shields.io/npm/dm/@kivibot/core?label=downloads&style=flat-square)](https://npm.im/package/@kivibot/core)
 
-[![npm-version](https://img.shields.io/npm/v/kivibot?color=527dec&label=kivibot%20<cli>&style=flat-square&labelColor=ffffff&logoColor=cb0000)](https://npm.im/package/kivibot)
-[![dm](https://shields.io/npm/dm/kivibot?label=downloads&style=flat-square&labelColor=ffffff&logoColor=cb0000)](https://npm.im/package/kivibot)
+[![npm-version](https://img.shields.io/npm/v/kivibot?color=527dec&label=kivibot%20<cli>&style=flat-square)](https://npm.im/package/kivibot)
+[![dm](https://shields.io/npm/dm/kivibot?label=downloads&style=flat-square)](https://npm.im/package/kivibot)
 
-[![node-engine](https://img.shields.io/node/v/@kivibot/core?style=flat-square&labelColor=ffffff&logo=Node.js)](https://nodejs.org)
-[![discord](https://img.shields.io/static/v1?label=Discord&message=Discord%20Channel&color=5865f2&logo=discord&labelColor=ffffff&style=flat-square)](https://discord.gg/RegGQD3Fu6)
-[![qq-group](https://img.shields.io/badge/QQ%E7%BE%A4-614617552-527dec?style=flat-square&labelColor=ffffff&logo=TencentQQ&logoColor=eb1923)](https://jq.qq.com/?_wv=1027&k=3hcWCnhq)
+[![node-engine](https://img.shields.io/node/v/@kivibot/core?style=flat-square&logo=Node.js&logoColor=ffffff)](https://nodejs.org)
+[![discord](https://img.shields.io/badge/chat-on%20discord-527dec?logo=discord&style=flat-square&logoColor=ffffff)](https://discord.gg/RegGQD3Fu6)
+[![qq-group](https://img.shields.io/badge/QQ%20%E7%BE%A4-614617552-527dec?logo=TencentQQ&style=flat-square&logoColor=ffffff)](https://jq.qq.com/?_wv=1027&k=3hcWCnhq)
 
 ::: warning 请注意
 框架仍处于**测试阶段**，可能会有潜在 `bug`，框架文档也正在完善中，敬请期待。
