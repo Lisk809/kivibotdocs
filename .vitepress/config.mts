@@ -32,14 +32,15 @@ export default defineConfig({
         items: [
           {
             items: [
+              { text: 'GitHub 团队', link: 'https://github.com/KiviBotLab' },
               { text: 'Discord 频道', link: 'https://discord.gg/RegGQD3Fu6' },
-              { text: 'QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=iK97X7NS' },
-              { text: 'KiviBot Lab', link: 'https://github.com/KiviBotLab' }
+              { text: 'QQ 交流群', link: 'https://jq.qq.com/?_wv=1027&k=iK97X7NS' }
             ]
           },
           {
             items: [
               { text: 'npm 插件列表', link: 'https://npm.im/search?q=kivibot-plugin' },
+              { text: '社区插件文档', link: 'https://plugin.kivibot.com' },
               { text: '支持本项目', link: '/reward' }
             ]
           }
@@ -115,7 +116,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/KiviBotLab/KiviBot' }],
     footer: {
       message:
-        '使用 <a href="https://github.com/KiviBotLab/KiviBot/blob/main/LICENSE">MPL-2.0</a> 协议开放源代码',
+        '<a href="https://github.com/KiviBotLab/KiviBot">KiviBot </a>使用 <a href="https://github.com/KiviBotLab/KiviBot/blob/main/LICENSE">MPL-2.0</a> 协议开放源代码，<a href="https://github.com/KiviBotLab/docs">框架文档</a>使用 <a href="https://github.com/KiviBotLab/docs/blob/main/LICENSE">MIT</a> 协议开放源代码',
       copyright: 'Copyright © 2022-PRESENT <a href="https://github.com/vikiboss">Viki</a>'
     },
     lastUpdatedText: '上次更新：',

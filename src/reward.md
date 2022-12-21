@@ -5,15 +5,21 @@ lastUpdated: false
 outline: false
 ---
 
-# 支持
+# 支持本项目
 
 ## 🔈 声明 {#claim}
 
-框架与插件完全开源，**仅用于学习交流，请勿用于任何非法用途**。
+1. `KiviBot` 是**完全免费且开放源代码**的软件，仅供学习和娱乐使用。
+2. 完全出于兴趣开发，**不会通过任何方式强制索取费用**，或对使用者提出物质条件。
+3. 精力有限，同时维护框架、文档以及诸多官方插件实属不易，感谢理解与支持。
 
-赞赏采取**自愿**原则，收到的赞赏将用于提高开发者积极性和开发环境。
+你可以给本项目的 [GitHub](https://github.com/KiviBotLab/KiviBot) 仓库点个 star 进行支持。~~可以的话再给你喜欢的插件仓库点点 star。~~
 
-你的支持就是最大的动力，感谢。
+## 💰 赞赏
+
+当然，你也可以通过赞赏的方式来支持，促进项目更好的发展。
+
+> 赞赏采取**自愿**原则，收到的赞赏将用于提高开发者积极性和开发环境。
 
 <div style="display: flex; flex-wrap: wrap;">
   <div style="display: flex; align-items: center; flex-direction: column;">
