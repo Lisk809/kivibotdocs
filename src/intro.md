@@ -8,7 +8,7 @@
 
 [![node-engine](https://img.shields.io/node/v/@kivibot/core?style=flat-square&logo=Node.js&logoColor=ffffff)](https://nodejs.org)
 [![discord](https://img.shields.io/badge/chat-on%20discord-527dec?logo=discord&style=flat-square&logoColor=ffffff)](https://discord.gg/RegGQD3Fu6)
-[![qq-group](https://img.shields.io/badge/QQ%20%E7%BE%A4-614617552-527dec?logo=TencentQQ&style=flat-square&logoColor=ffffff)](https://jq.qq.com/?_wv=1027&k=3hcWCnhq)
+[![qq-group](https://img.shields.io/badge/QQ%20%E7%BE%A4-614617552-527dec?logo=TencentQQ&style=flat-square&logoColor=ffffff)](https://jq.qq.com/?_wv=1027&k=iK97X7NS)
 
 ::: warning 请注意
 框架仍处于**测试阶段**，可能会有潜在 `bug`，框架文档也正在完善中，敬请期待。
