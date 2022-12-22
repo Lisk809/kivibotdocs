@@ -6,7 +6,7 @@
 [![npm-version](https://img.shields.io/npm/v/kivibot?color=527dec&label=kivibot%20<cli>&style=flat-square)](https://npm.im/package/kivibot)
 [![dm](https://shields.io/npm/dm/kivibot?label=downloads&style=flat-square)](https://npm.im/package/kivibot)
 
-[![node-engine](https://img.shields.io/node/v/@kivibot/core?style=flat-square&logo=Node.js&logoColor=ffffff)](https://nodejs.org)
+[![node-engine](https://img.shields.io/node/v/@kivibot/core?style=flat-square&logo=Node.js&logoColor=ffffff&color=527dec)](https://nodejs.org)
 [![discord](https://img.shields.io/badge/chat-on%20discord-527dec?logo=discord&style=flat-square&logoColor=ffffff)](https://discord.gg/RegGQD3Fu6)
 [![qq-group](https://img.shields.io/badge/QQ%20%E7%BE%A4-614617552-527dec?logo=TencentQQ&style=flat-square&logoColor=ffffff)](https://jq.qq.com/?_wv=1027&k=iK97X7NS)
 
@@ -47,7 +47,7 @@
 :::
 
 ```js
-const { KiviPlugin, segment, http } = require('@kivibot/core')
+const { KiviPlugin, segment } = require('@kivibot/core')
 
 const plugin = new KiviPlugin('demo', '0.1.0')
 
