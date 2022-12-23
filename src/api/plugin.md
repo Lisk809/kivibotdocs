@@ -225,7 +225,7 @@ const config = {}
 
 plugin.onMounted(() => {
   // 加载本地配置，并覆盖默认配置（如果有）
-  plugin.saveConfig(Object.assig(config, plugin.loadConfig()))
+  plugin.saveConfig(Object.assign(config, plugin.loadConfig()))
 
   // 插件主要逻辑写在这里
 })
@@ -264,7 +264,7 @@ const config = {}
 
 plugin.onMounted(() => {
   // 加载本地配置，并覆盖默认配置（如果有）
-  plugin.saveConfig(Object.assig(config, plugin.loadConfig()))
+  plugin.saveConfig(Object.assign(config, plugin.loadConfig()))
 
   // 插件主要逻辑写在这里
 })
