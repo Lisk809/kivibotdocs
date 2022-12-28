@@ -19,5 +19,6 @@
 - [天气](https://github.com/KiviBotLab/kivibot-plugin-weather)，插件标识：`weather`
 - [唱歌](https://github.com/KiviBotLab/kivibot-plugin-sing)，插件标识：`sing`
 - [黑名单](https://github.com/KiviBotLab/kivibot-plugin-black)，插件标识：`black`
+- [积分签到](https://github.com/KiviBotLab/kivibot-plugin-sign)，插件标识：`sign`
 
 > 开发不易，点个不要钱的 star 就是对我们的最大支持。
