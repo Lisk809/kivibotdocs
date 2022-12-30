@@ -116,7 +116,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/KiviBotLab/KiviBot' }],
     footer: {
       message:
-        '<a href="https://github.com/KiviBotLab/KiviBot">KiviBot </a>使用 <a href="https://github.com/KiviBotLab/KiviBot/blob/main/LICENSE">MPL-2.0</a> 协议开放源代码，<a href="https://github.com/KiviBotLab/docs">框架文档</a>使用 <a href="https://github.com/KiviBotLab/docs/blob/main/LICENSE">MIT</a> 协议开放源代码',
+        '<a href="https://github.com/KiviBotLab/KiviBot">KiviBot </a>使用 <a href="https://github.com/KiviBotLab/KiviBot/blob/main/LICENSE">MPL-2.0</a> 协议开放源代码, <a href="https://github.com/KiviBotLab/docs">框架文档</a>使用 <a href="https://github.com/KiviBotLab/docs/blob/main/LICENSE">MIT</a> 协议开放源代码',
       copyright: 'Copyright © 2022-PRESENT <a href="https://github.com/vikiboss">Viki</a>'
     },
     lastUpdatedText: '上次更新：',

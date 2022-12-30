@@ -9,7 +9,7 @@ const { site } = useData()
     <p class="code">404</p>
     <div class="divider" />
     <blockquote class="quote">
-      啊这，踏入了神秘领域，快回到首页
+      啊这, 踏入了神秘领域, 快回到首页
     </blockquote>
 
     <div class="action">
