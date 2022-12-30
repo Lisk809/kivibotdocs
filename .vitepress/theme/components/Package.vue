@@ -1,5 +1,5 @@
 <template>
-  <div class="pkg" @click="handleOpen(pkg.links.repository ?? pkg.links.npm)">
+  <div class="pkg" @click="handleOpen(pkg.links.npm ?? pkg.links.repository)">
     <div>
       <h3>
         <span>{{ pkg.name.replace('kivibot-plugin-', '') }}</span>

@@ -39,7 +39,7 @@ const error = ref()
 
 onMounted(async () => {
   try {
-    const api = 'https://inpm.deno.dev/-/v1/search?text=kivibot-plugin&size=250'
+    const api = 'https://registry.npmjs.org/-/v1/search?text=kivibot-plugin&size=250'
     const res = await fetch(api)
     plugins.value = await res.json()
 
