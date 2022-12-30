@@ -8,7 +8,6 @@ export default defineConfig({
   lastUpdated: true,
   markdown: {
     theme: 'one-dark-pro'
-    // lineNumbers: true
   },
   srcDir: 'src',
   themeConfig: {
@@ -20,13 +19,6 @@ export default defineConfig({
         text: '开发',
         link: '/develop/prerequisite'
       },
-      // {
-      //   text: '文章',
-      //   items: [
-      //     { text: '如何发布一个 npm 包', link: '#' },
-      //     { text: 'ESM 和 CommonJS', link: '#' }
-      //   ]
-      // },
       {
         text: '社区',
         items: [
@@ -39,8 +31,7 @@ export default defineConfig({
           },
           {
             items: [
-              { text: 'npm 插件列表', link: 'https://npm.im/search?q=kivibot-plugin' },
-              { text: '社区插件文档', link: 'https://plugin.kivibot.com' },
+              // { text: '社区插件文档', link: 'https://plugin.kivibot.com' },
               { text: '支持本项目', link: '/reward' }
             ]
           }
@@ -85,8 +76,7 @@ export default defineConfig({
         items: [
           { text: '插件说明', link: '/plugin/note' },
           { text: '安装插件', link: '/plugin/install' },
-          { text: '官方插件', link: '/plugin/official' },
-          { text: '社区插件', link: '/plugin/third' }
+          { text: '插件列表', link: '/plugin/list' }
         ]
       },
       {
@@ -119,7 +109,7 @@ export default defineConfig({
         '<a href="https://github.com/KiviBotLab/KiviBot">KiviBot </a>使用 <a href="https://github.com/KiviBotLab/KiviBot/blob/main/LICENSE">MPL-2.0</a> 协议开放源代码, <a href="https://github.com/KiviBotLab/docs">框架文档</a>使用 <a href="https://github.com/KiviBotLab/docs/blob/main/LICENSE">MIT</a> 协议开放源代码',
       copyright: 'Copyright © 2022-PRESENT <a href="https://github.com/vikiboss">Viki</a>'
     },
-    lastUpdatedText: '上次更新：',
+    lastUpdatedText: '上次更新',
     docFooter: {
       prev: '上一页',
       next: '下一页'
