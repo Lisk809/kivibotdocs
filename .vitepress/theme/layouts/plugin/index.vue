@@ -1,5 +1,5 @@
 <template>
-  <div v-if="plugins">
+  <div v-if="plugins.total">
     <h1>KiviBot Beta 插件列表</h1>
 
     <div class="search">
@@ -33,7 +33,7 @@ import Package from '../../components/Package.vue'
 import type { PackageInfo } from '../../components/Package.vue'
 
 
-const plugins = ref({ total: 0, objects: [], time: new Date() })
+const plugins = ref({ total: 0, objects: [] as { package: PackageInfo, score: any }[], time: new Date() })
 const word = ref("")
 const error = ref()
 
