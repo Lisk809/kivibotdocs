@@ -76,6 +76,7 @@ export default defineConfig({
         items: [
           { text: '插件说明', link: '/plugin/note' },
           { text: '安装插件', link: '/plugin/install' },
+          { text: '官方插件', link: '/plugin/official' },
           { text: '插件列表', link: '/plugin/list' }
         ]
       },
