@@ -16,5 +16,6 @@
 - [唱歌](https://github.com/KiviBotLab/kivibot-plugin-sing), 插件标识：`sing`
 - [黑名单](https://github.com/KiviBotLab/kivibot-plugin-black), 插件标识：`black`
 - [积分签到](https://github.com/KiviBotLab/kivibot-plugin-sign), 插件标识：`sign`
+- [关键词](https://github.com/KiviBotLab/kivibot-plugin-keyword), 插件标识：`keyword`
 
 > 开发不易, 点个 star 就是对我们日夜付出的最大支持。
