@@ -13,9 +13,9 @@
 
     <div class="footer">
       <span title="发布时间">{{ new Date(pkg.date).toLocaleString() }}</span>
-      <div :title="pkg.publisher.username">
+      <div :title="pkg.author?.name || pkg.publisher.username">
         <img class="avatar" :src="getAvatar(pkg.publisher.email)" />
-        <span>{{ pkg.publisher.username }}</span>
+        <span>{{ pkg.author?.name || pkg.publisher.username }}</span>
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@ const { pkg } = defineProps<{ pkg: PackageInfo }>()
 
 
 function getAvatar(email: string) {
-  return `https://s.gravatar.com/avatar/${email ? md5.hash(email) : ''}?d=mp`
+  return `https://gravatar.deno.dev/avatar/${email ? md5.hash(email) : ''}?d=mp`
 }
 
 function handleOpen(link: string) {
