@@ -425,11 +425,11 @@ plugin.onMounted(() => {
 不同事件的 `handler` 的事件回调参数不同, 请参考 [`oicq` v2 标准事件](/api/oicq_events)中的对应事件说明。
 
 ::: tip 小提示
-`plugin.on()` 和 `plugin.once()` 监听的事件不需要手动在 `plugin.onUnmounted()` 中需要监听, 插件会自动收集监听函数和定时任务等, 在插件被禁用的时候自动将其移除。
+`plugin.on()` 和 `plugin.once()` 监听的事件不需要在 `plugin.onUnmounted()` 中手动取消监听, 插件会自动收集监听函数和定时任务等, 在插件被禁用的时候自动将其移除。
 :::
 
 ::: warning 请注意
-插件不会自动处理 `bot` 监听的事件, 非特殊需要, 请勿使用 `bot.on` 和 `bot.once` 等进行事件监听, 否则需要在 `plugin.onUnmounted()` 中手动取消监听, 不然在插件被禁用后, 无法自动处理这些已监听的事件。
+插件不会自动处理 `bot` 监听的事件, 非特殊需要, 请勿使用 `bot.on()` 和 `bot.once()` 等进行事件监听, 否则需要在 `plugin.onUnmounted()` 中手动取消监听, 不然在插件被禁用后, 无法自动取消这些已监听的事件。
 :::
 
 监听“好友申请”事件并自动同意的实例:
@@ -459,9 +459,9 @@ plugin.onMounted(() => {
 不同事件的 `handler` 的事件回调参数不同, 请参考 [`oicq` v2 标准事件](/api/oicq_events)中的对应事件说明。
 
 ::: tip 小提示
-`plugin.on()` 和 `plugin.once()` 监听的事件不需要手动在 `plugin.onUnmounted()` 中需要监听, 插件会自动收集监听函数和定时任务等, 在插件被禁用的时候自动将其移除。
+`plugin.on()` 和 `plugin.once()` 监听的事件不需要在 `plugin.onUnmounted()` 中手动取消监听, 插件会自动收集监听函数和定时任务等, 在插件被禁用的时候自动将其移除。
 :::
 
 ::: warning 请注意
-插件不会自动处理 `bot` 监听的事件, 非特殊需要, 请勿使用 `bot.on` 和 `bot.once` 等进行事件监听, 否则需要在 `plugin.onUnmounted()` 中手动取消监听, 不然在插件被禁用后, 无法自动处理这些已监听的事件。
+插件不会自动处理 `bot` 监听的事件, 非特殊需要, 请勿使用 `bot.on()` 和 `bot.once()` 等进行事件监听, 否则需要在 `plugin.onUnmounted()` 中手动取消监听, 不然在插件被禁用后, 无法自动取消这些已监听的事件。
 :::
