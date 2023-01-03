@@ -436,7 +436,7 @@ plugin.onMounted(() => {
 
 ```js
 plugin.onMounted(() => {
-  plugin.on('request.group.add', event => {
+  plugin.on('request.friend.add', event => {
     event.approve(true)
   })
 })
