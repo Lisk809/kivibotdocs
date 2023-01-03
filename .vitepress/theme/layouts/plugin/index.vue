@@ -43,7 +43,6 @@ onMounted(async () => {
     const res = await fetch(api)
     plugins.value = await res.json()
 
-    console.log(plugins.value)
   } catch (err) {
     error.value = err
   }
@@ -57,9 +56,9 @@ const pkgs = computed(() => {
   }
 
   const ps = plugins.value.objects.filter((pkg: { package: PackageInfo }) => {
-    const isName = pkg.package.name.includes(word.value)
-    const isDescription = pkg.package.description.includes(word.value)
-    const isAuthor = pkg.package.publisher.username.includes(word.value)
+    const isName = pkg.package.name.includes(word.value.toLowerCase())
+    const isDescription = pkg.package.description.includes(word.value.toLowerCase())
+    const isAuthor = pkg.package.publisher.username.includes(word.value.toLowerCase())
 
     return isName || isDescription || isAuthor
   })
@@ -80,7 +79,7 @@ const pkgs = computed(() => {
 })
 
 const developers = computed(() => {
-  return new Set(...pkgs.value.map(e => e.publisher.username))
+  return new Set(pkgs.value.map(e => (e.author?.name || e.publisher.username).toLowerCase()))
 })
 
 </script>
