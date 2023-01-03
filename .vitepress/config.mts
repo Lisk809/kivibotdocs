@@ -14,7 +14,7 @@ export default defineConfig({
     logo: '/dimo.png',
     nav: [
       { text: '文档', link: '/intro' },
-      { text: '插件', link: '/plugin/note' },
+      { text: '插件', link: '/plugin/list' },
       {
         text: '开发',
         link: '/develop/prerequisite'
@@ -43,9 +43,9 @@ export default defineConfig({
         text: '开始',
         collapsible: true,
         items: [
-          { text: '简介', link: '/intro' },
+          { text: '框架简介', link: '/intro' },
           {
-            text: '安装',
+            text: '安装框架',
             items: [
               { text: 'Linux', link: '/guide/start/linux' },
               { text: 'Windows', link: '/guide/start/win' },
@@ -54,11 +54,11 @@ export default defineConfig({
             ]
           },
           {
-            text: '基础',
+            text: '基础知识',
             link: '/guide/basic'
           },
           {
-            text: '命令',
+            text: '操作命令',
             items: [
               { text: '消息指令', link: '/guide/cmd/msg' },
               { text: 'CLI 命令', link: '/guide/cmd/cli' }
