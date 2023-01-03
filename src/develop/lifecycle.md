@@ -1,4 +1,4 @@
-# 插件生命周期
+# 插件生命周期 {#plugin-lifecycle}
 
 完善中, 可先参考 [`KiviPlugin API`](/api/plugin)
 
@@ -14,3 +14,5 @@
 8. 插件执行 `plugin.onUnmounted()`, 同时自动取消监听事件, 清理定时任务
 9. 框架删除插件的 `require` 缓存
 10. 结束
+
+> 重载命令 `/plugin reload <name>` 等同于先禁用插件，再启用插件。

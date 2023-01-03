@@ -1,4 +1,4 @@
-# 在 Linux 平台使用 KiviBot
+# 在 Linux 平台使用 KiviBot {#linux}
 
 ## 安装 Node.js
 

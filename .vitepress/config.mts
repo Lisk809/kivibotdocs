@@ -67,6 +67,10 @@ export default defineConfig({
           {
             text: '配置文件',
             link: '/guide/config'
+          },
+          {
+            text: '常见问题',
+            link: '/guide/faq'
           }
         ]
       },

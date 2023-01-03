@@ -1,4 +1,4 @@
-# 在 Windows 平台使用 KiviBot
+# 在 Windows 平台使用 KiviBot {#win}
 
 ## 安装 Node.js
 

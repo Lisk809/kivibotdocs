@@ -1,4 +1,4 @@
-# 在 iOS 平台使用 KiviBot
+# 在 iOS 平台使用 KiviBot {#ios}
 
 ~~求你了, 有钱买 iOS 不如几十块钱整台服务器, 能用一整年呢, 别折腾 iOS 了。~~
 

@@ -1,4 +1,4 @@
-# 前置知识
+# 前置知识 {#prerequisite}
 
 `KiviBot` 可以使用 `JavaScript` / `TypeScript` 语言来开发插件。
 

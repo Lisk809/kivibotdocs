@@ -1,4 +1,4 @@
-# 在 Android 平台使用 KiviBot
+# 在 Android 平台使用 KiviBot {#android}
 
 ## 安装 Termux APP
 

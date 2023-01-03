@@ -1,10 +1,10 @@
-# KiviPlugin API
+# KiviPlugin API {#kivi_plugin-apis}
 
 ::: warning 请注意
-框架仍处于**测试阶段**, 插件的 API 随时可能发生较大的更改, 请勿用于生产环境。
+框架仍处于**测试阶段**, 插件的 API 可能发生较大的更改, 请勿用于生产环境。
 :::
 
-你可以在这里找到 `KiviPlugin` 类的 API 的详细说明, 也可以查阅[源码](https://github.com/KiviBotLab/KiviBot/blob/main/src/core/plugin/plugin.ts)查看详细的 API 实现。
+`KiviPlugin` 类的 API 说明如下, 你也可以前往 [GitHub](https://github.com/KiviBotLab/KiviBot/blob/main/src/core/plugin/plugin.ts) 查看详细实现。
 
 ## KiviPlugin()<Badge type="warning" text="插件主类" />
 
@@ -32,7 +32,7 @@ const plugin = new kiviPlugin('demo', '0.1.0')
 
 ## plugin\.name <Badge type="warning" text="属性" />
 
-实例化 `KiviPlugin` 时传入的插件名
+实例化 `KiviPlugin` 时传入的插件名, `string` 类型。
 
 ```ts
 const plugin = new kiviPlugin('demo', '0.1.0')
@@ -44,7 +44,7 @@ plugin.onMounted(() => {
 
 ## plugin\.version <Badge type="warning" text="属性" />
 
-实例化 `KiviPlugin` 时传入的插件版本号
+实例化 `KiviPlugin` 时传入的插件版本号, `string` 类型。
 
 ```ts
 const plugin = new kiviPlugin('demo', '0.1.0')
@@ -65,19 +65,19 @@ const plugin = new kiviPlugin('demo', version)
 
 ## plugin.dataDir <Badge type="warning" text="属性" />
 
-插件数据存放目录, `框架目录/data/plugins/[name]`（绝对路径） 注意这里的 `name` 是实例化插件的时候传入的 `name`
+插件数据存放目录, `框架目录/data/plugins/[name]`（绝对路径） 注意这里的 `name` 是实例化插件的时候传入的 `name`, `string` 类型。
 
 ```ts
 const plugin = new kiviPlugin('demo', '0.1.0')
 
 plugin.onMounted(() => {
-  plugin.log(plugin.dataDir) // 框架目录/data/plugins/demo
+  plugin.log(plugin.dataDir) // [框架目录]/data/plugins/demo
 })
 ```
 
 ## plugin.logger <Badge type="warning" text="属性" />
 
-[log4js](https://github.com/log4js-node/log4js-node#usage) 的 `Logger` 实例, 专用来给插件规范化输出调试日志, 可以调用其上的各种不同等级（`level`）的调试函数打印日志。详情参考 [log4js 官方文档](https://log4js-node.github.io/log4js-node/)
+[log4js](https://github.com/log4js-node/log4js-node#usage) 的 `Logger` 实例, 专用来给插件规范化输出调试日志, 可以调用其上的各种不同等级（`level`）的调试函数打印日志。详情参考 [log4js 官方文档](https://log4js-node.github.io/log4js-node/)。
 
 ```ts
 const plugin = new kiviPlugin('demo', '0.1.0')
@@ -91,7 +91,7 @@ plugin.logger.fatal('致命错误')
 
 ## plugin.bot <Badge type="warning" text="属性" />
 
-oicq 的 `Client` 实例, 可以调用各种 Bot API, 仅在 `onMounted` 和 `onUnmounted` 中（即被挂载了之后）才能被访问到
+oicq 的 `Client` 实例, 可以调用各种 Bot API, 仅在 `onMounted` 和 `onUnmounted` 中（即被挂载了之后）才能被访问到, `Client` 类型。
 
 ```ts
 plugin.onMounted(() => {
@@ -101,11 +101,11 @@ plugin.onMounted(() => {
 
 ## plugin.admins <Badge type="warning" text="getter 属性" />
 
-Bot 管理员列表。
+Bot 管理员列表, `number[]` 类型。
 
 ```ts
 plugin.onMounted(() => {
-  plugin.log(plugin.admins) // Bot 管理员列表
+  plugin.log(plugin.admins) // [1141284758]
 })
 ```
 
@@ -115,7 +115,7 @@ plugin.onMounted(() => {
 等价于 `plugin.admins[0]`
 :::
 
-Bot 主管理员。
+Bot 主管理员, `number` 类型。
 
 ```ts
 plugin.onMounted(() => {
@@ -129,7 +129,7 @@ plugin.onMounted(() => {
 等价于 `plugin.admins.slice(1)`
 :::
 
-Bot 副管理员列表。
+Bot 副管理员列表, `number[]` 类型。
 
 ```ts
 plugin.onMounted(() => {
@@ -139,13 +139,13 @@ plugin.onMounted(() => {
 
 ## plugin.onMounted() <Badge type="warning" text="方法" />
 
-插件的生命周期函数, 插件被启用时被调用, 有关 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）的方法和逻辑, 请写到传入的处理函数里。
+插件的生命周期函数, 插件被启用时, 传入的函数会被调用。
 
 函数签名：`onMounted(handler)`
 
 **参数说明**：
 
-- `handler`: 插件被启用的处理函数, 必填, 默认传入 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）和 Bot 管理员列表。插件主要逻辑请写在此函数体内。
+- `handler`: 类型 `(bot: Client, admins: number[]) => void`, 插件被启用的处理函数, 必填, 默认传入 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）和 Bot 管理员列表。插件主要逻辑请写在此函数体内。
 
 **无返回值**
 
@@ -159,13 +159,13 @@ plugin.onMounted((bot, admins) => {
 
 ## plugin.onUnmounted() <Badge type="warning" text="方法" />
 
-插件的生命周期函数, 插件被禁用时被调用, 有关 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）的方法和逻辑, 请写到传入的处理函数里。
+插件的生命周期函数, 插件被禁用时, 传入的函数会被调用, 你可以在这里处理插件善后逻辑, 如关闭关闭数据库, 断开相关连接, 停止相关服务, 释放内存等。
 
 函数签名：`onUnmounted(handler)`
 
 **参数说明**：
 
-- `handler`: 插件被禁用用的处理函数, 必填, 默认传入 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）和 Bot 管理员列表。插件的善后逻辑（关闭连接、内存释放等）请写在此函数体内。
+- `handler`: 类型 `(bot: Client, admins: number[]) => void`, 插件被禁用的处理函数, 必填, 默认传入 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）和 Bot 管理员列表。
 
 **无返回值**
 
@@ -203,15 +203,17 @@ plugin.onMounted(() => {
 
 **参数说明**：
 
-- `data`: 可转为 `JSON` 的任何类型, 必填
+- `data`: 可转为 `JSON` 的任何合法类型, 一般是普通对象, 必填
 - `filepath`: `string` 类型, 可选, 保存的配置文件路径, 默认为插件数据目录下的 `config.json`
 - `options`: `fs.WriteOptions` 类型, 可选, 写入配置的选项
 
 **返回值**：`boolean` 是否写入成功
 
 ```ts
+plugin.saveConfig({ name: 'KiviBot' }) // 可以在外层保存
+
 plugin.onMounted(() => {
-  plugin.saveConfig({ name: 'KiviBot' }) // [!code focus]
+  plugin.saveConfig({ name: 'KiviBot' }) // 也可以在内部保存
 })
 ```
 
@@ -220,7 +222,7 @@ plugin.onMounted(() => {
 :::
 
 ```js
-// 插件的默认配置
+// 插件的默认配置, 必须是普通对象, 且不包含正则等无法正常转换为 JSON 的内置对象
 const config = {}
 
 plugin.onMounted(() => {
@@ -247,10 +249,10 @@ plugin.onMounted(() => {
 **返回值**：解析后的数据对象
 
 ```ts
-const config = plugin.loadConfig() // [!code focus]
+const config = plugin.loadConfig() // 可以在外层读取
 
 plugin.onMounted(() => {
-  const config = plugin.loadConfig() // [!code focus]
+  const config = plugin.loadConfig() // 也可以在内部读取
 })
 ```
 
@@ -284,7 +286,7 @@ plugin.onMounted(() => {
 
 **参数说明**：
 
-- `handler`: 消息处理函数, 必填, 默认传入[消息事件数据](https://oicqjs.github.io/oicq/interfaces/EventMap.html#message)（包含群、好友和讨论组消息）
+- `handler`: 类型 `(event: AllMessageEvent, bot: Client) => void`, 消息处理函数, 必填, 默认传入[消息事件数据](https://oicqjs.github.io/oicq/interfaces/EventMap.html#message)（包含群、好友和讨论组消息）
 
 **无返回值**
 
@@ -321,7 +323,7 @@ plugin.onMounted(() => {
 **参数说明**：
 
 - `matches`: 字符串或正则或字符串和正则的数组, 必填, 待匹配内容, 对整个消息进行匹配
-- `handler`: 消息处理函数, 必填, 默认传入[消息事件数据](https://oicqjs.github.io/oicq/interfaces/EventMap.html#message)（包含群、好友和讨论组消息）
+- `handler`: 类型 `(event: AllMessageEvent, bot: Client) => void`, 消息处理函数, 必填, 默认传入[消息事件数据](https://oicqjs.github.io/oicq/interfaces/EventMap.html#message)（包含群、好友和讨论组消息）
 
 **无返回值**
 
@@ -343,7 +345,7 @@ plugin.onMounted(() => {
 
 ## plugin.onAdminMatch() <Badge type="warning" text="方法" />
 
-与 `plugin.onMatch` 类似, 不同之处在于 `onAdminMatch` 只会处理所有管理员消息。
+与 `plugin.onMatch` 类似, 不同之处在于 `onAdminMatch` 只会处理所有 Bot 管理员消息。
 
 ## plugin.onCmd() <Badge type="warning" text="方法" />
 
@@ -354,14 +356,14 @@ plugin.onMounted(() => {
 **参数说明**：
 
 - `cmds`: 字符串或正则或字符串和正则的数组, 必填, 待匹配的命令
-- `handler`: 消息处理函数, 必填, 默认传入[消息事件数据](https://oicqjs.github.io/oicq/interfaces/EventMap.html#message)（包含群、好友和讨论组消息）和 [minimist](https://github.com/minimistjs/minimist) 解析后的参数和选项
+- `handler`: 类型 `(event: AllMessageEvent, params: string[], options: { [string]: string }) => void`, 消息处理函数, 必填, 默认传入[消息事件数据](https://oicqjs.github.io/oicq/interfaces/EventMap.html#message)（包含群、好友和讨论组消息）和 [minimist](https://github.com/minimistjs/minimist) 解析后的参数和选项
 
 **无返回值**
 
 ```ts
 plugin.onMounted(() => {
+  // 收到的消息格式应符合： "点歌 稻香 --type qq --n 2" // [!code focus]
   plugin.onCmd('点歌', (event, params, options) /**  [!code focus] */ => {
-    // 收到消息： "点歌 稻香 --type qq --n 2" // [!code focus]
     const [songName, ...otherParams] = params // [!code focus]
     const { n, type } = options // [!code focus]
 
@@ -376,7 +378,7 @@ plugin.onMounted(() => {
 
 ## plugin.onAdminCmd() <Badge type="warning" text="方法" />
 
-与 `plugin.onCmd` 类似, 不同之处在于 `onAdminCmd` 只会处理所有管理员消息。
+与 `plugin.onCmd` 类似, 不同之处在于 `onAdminCmd` 只会处理所有 Bot 管理员消息。
 
 ## plugin.cron() <Badge type="warning" text="方法" />
 
@@ -389,7 +391,7 @@ plugin.onMounted(() => {
 **参数说明**：
 
 - `cronExpression`: `string` 类型, 必填, `cron` 表达式
-- `handler`: 定时任务函数, 默认传入 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）和 Bot 管理员列表
+- `handler`: 类型 `(bot: Client, admins: number[]) => void`, 定时任务函数, 默认传入 Bot 实例（[`Client` 类](https://oicqjs.github.io/oicq/classes/Client.html)）和 Bot 管理员列表
 
 **返回值**: `node-cron` 的 `Task` 实例, 可以调用其上的 `stop` 方法取消定时任务。
 
@@ -416,18 +418,50 @@ plugin.onMounted(() => {
 
 ## plugin.on() <Badge type="warning" text="方法" />
 
-监听 [`oicq v2` 标准事件](/api/oicq_events), 并使用 `hander` 处理。
+监听 [`oicq` v2 标准事件](/api/oicq_events), 并使用 `hander` 处理。
 
 函数签名：`on(eventName, handler)`
+
+不同事件的 `handler` 的事件回调参数不同, 请参考 [`oicq` v2 标准事件](/api/oicq_events)中的对应事件说明。
+
+::: tip 小提示
+`plugin.on()` 和 `plugin.once()` 监听的事件不需要手动在 `plugin.onUnmounted()` 中需要监听, 插件会自动收集监听函数和定时任务等, 在插件被禁用的时候自动将其移除。
+:::
+
+::: warning 请注意
+插件不会自动处理 `bot` 监听的事件, 非特殊需要, 请勿使用 `bot.on` 和 `bot.once` 等进行事件监听, 否则需要在 `plugin.onUnmounted()` 中手动取消监听, 不然在插件被禁用后, 无法自动处理这些已监听的事件。
+:::
+
+监听“好友申请”事件并自动同意的实例:
+
+```js
+plugin.onMounted(() => {
+  plugin.on('request.group.add', event => {
+    event.approve(true)
+  })
+})
+```
 
 ## plugin.off() <Badge type="warning" text="方法" />
 
-取消监听 [`oicq v2` 标准事件](/api/oicq_events)。
+取消监听 [`oicq` v2 标准事件](/api/oicq_events)。
 
 函数签名：`off(eventName, handler)`
 
+不同事件的 `handler` 的事件回调参数不同, 请参考 [`oicq` v2 标准事件](/api/oicq_events)中的对应事件说明。
+
 ## plugin.once() <Badge type="warning" text="方法" />
 
-单次监听 [`oicq v2` 标准事件](/api/oicq_events), 并使用 `hander` 处理。
+**单次**监听 [`oicq` v2 标准事件](/api/oicq_events), 并使用 `hander` 处理。
 
 函数签名：`on(eventName, handler)`
+
+不同事件的 `handler` 的事件回调参数不同, 请参考 [`oicq` v2 标准事件](/api/oicq_events)中的对应事件说明。
+
+::: tip 小提示
+`plugin.on()` 和 `plugin.once()` 监听的事件不需要手动在 `plugin.onUnmounted()` 中需要监听, 插件会自动收集监听函数和定时任务等, 在插件被禁用的时候自动将其移除。
+:::
+
+::: warning 请注意
+插件不会自动处理 `bot` 监听的事件, 非特殊需要, 请勿使用 `bot.on` 和 `bot.once` 等进行事件监听, 否则需要在 `plugin.onUnmounted()` 中手动取消监听, 不然在插件被禁用后, 无法自动处理这些已监听的事件。
+:::

@@ -1,4 +1,4 @@
-# KiviBot CLI 命令
+# KiviBot CLI 命令 {#cmd-cli}
 
 KiviBot CLI 是框架的脚手架, 或叫命令行工具, 就是你启动框架的 `kivi` 命令。
 

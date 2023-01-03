@@ -1,6 +1,8 @@
-# KiviBot 标准事件
+# KiviBot 标准事件 {#kivibot-events}
 
-## kivi.admin <Badge type="warning" text="不推荐" />
+> 可以用插件 API [`plugin.on`](/api/plugin#plugin-on) 监听和处理 KiviBot 标准事件。
+
+## `kivi.admin` <Badge type="warning" text="不推荐" />
 
 ::: info 小提示
 请直接访问 `plugin.admins`, `plugin.mainAdmin` 和 `plugin.subAdmins`。
@@ -10,6 +12,14 @@
 
 `KiviBot` 管理员变动事件。
 
-**事件参数**:
+**事件回调参数**:
 
-- `admins`: `string` 数组类型, 新的管理员列表
+- `admins`: `string[]` 类型, 新的管理员列表
+
+```js
+plugin.onMounted(() => {
+  plugin.on('kivi.admin', admins => {
+    plugin.log('框架管理员更新了，新管理员列表: ' + admins.join(', '))
+  })
+})
+```
