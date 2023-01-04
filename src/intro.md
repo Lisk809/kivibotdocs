@@ -3,7 +3,7 @@
 [![npm-version](https://img.shields.io/npm/v/@kivibot/core?color=527dec&label=%40kivibot%2Fcore&style=flat-square)](https://npm.im/package/@kivibot/core)
 [![dm](https://shields.io/npm/dm/@kivibot/core?label=downloads&style=flat-square)](https://npm.im/package/@kivibot/core)
 
-[![npm-version](https://img.shields.io/npm/v/kivibot?color=527dec&label=kivibot%20<cli>&style=flat-square)](https://npm.im/package/kivibot)
+[![npm-version](https://img.shields.io/npm/v/kivibot?color=527dec&label=kivibot%20(cli)&style=flat-square)](https://npm.im/package/kivibot)
 [![dm](https://shields.io/npm/dm/kivibot?label=downloads&style=flat-square)](https://npm.im/package/kivibot)
 
 [![node-engine](https://img.shields.io/node/v/@kivibot/core?style=flat-square&logo=Node.js&logoColor=ffffff&color=527dec)](https://nodejs.org)
@@ -24,15 +24,15 @@
 
 - 🚲 **轻量**: 无需运行 UI, 内存占用低, 取决于设备状态、账号群聊数和活跃程度。
 
-- ⚡ **高效**: 框架开发语言和底层协议语言一致, 框架依赖少, 执行效率高。
+- ⚡ **高效**: 框架开发语言和底层协议语言一致, 由 node 驱动, 执行效率高。
 
-- 📱 **跨平台**: Windows, Linux, 手机和平板 (通过模拟 Linux 环境) 都能运行。
+- 📱 **跨平台**: Windows, Linux, 手机平板, 家用路由器和随身 WiFi 等都能运行。
 
 - 🔗 **多协议**: 支持安卓手机、安卓平板、iPad、安卓手表和 MacOS 协议。
 
 - 📦 **注重体验**: 一条 QQ 消息即可安装、启用或升级插件, 极致的用户体验。
 
-- 🚤 **极速开发**: 学习门槛低, 只需几行 JS/TS 代码就能编写插件。
+- 🚤 **极速开发**: 门槛低, 只需几行 JS/TS 代码和一点语言基础就能快速编写插件。
 
 - 💻 **开发者友好**: 插件支持热重载, 拥有友好的脚手架与完备的 TS 类型定义。
 
@@ -40,10 +40,10 @@
 
 ## 插件示例 {#plugin-example}
 
-仅需编写少量 JavaScript 代码即可实现丰富功能, 参考下面的 Demo。
+仅需编写少量 JavaScript 代码即可实现丰富功能, 参考下面的插件 Demo。
 
 ::: warning 请注意
-框架仍处于**测试阶段**, 插件的 API 随时可能发生较大更改, 请勿用于生产环境。
+框架仍处于**测试阶段**, 插件的 API 可能发生较大更改, 请勿用于生产环境。
 :::
 
 ```js

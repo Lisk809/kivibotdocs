@@ -43,14 +43,14 @@ export default defineConfig({
         text: '开始',
         collapsible: true,
         items: [
-          { text: '框架简介', link: '/intro' },
+          { text: '简介', link: '/intro' },
           {
-            text: '安装框架',
+            text: '安装',
             items: [
               { text: 'Linux', link: '/guide/start/linux' },
               { text: 'Windows', link: '/guide/start/win' },
               { text: 'Android (Termux)', link: '/guide/start/android' },
-              { text: 'iOS', link: '/guide/start/ios' }
+              { text: '其他平台', link: '/guide/start/other' }
             ]
           },
           {
@@ -58,7 +58,7 @@ export default defineConfig({
             link: '/guide/basic'
           },
           {
-            text: '操作命令',
+            text: '命令',
             items: [
               { text: '消息指令', link: '/guide/cmd/msg' },
               { text: 'CLI 命令', link: '/guide/cmd/cli' }
@@ -111,7 +111,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/KiviBotLab/KiviBot' }],
     footer: {
       message:
-        '<a href="https://github.com/KiviBotLab/KiviBot">KiviBot </a>使用 <a href="https://github.com/KiviBotLab/KiviBot/blob/main/LICENSE">MPL-2.0</a> 协议开放源代码, <a href="https://github.com/KiviBotLab/docs">框架文档</a>使用 <a href="https://github.com/KiviBotLab/docs/blob/main/LICENSE">MIT</a> 协议开放源代码',
+        '<a href="https://github.com/KiviBotLab/KiviBot">KiviBot </a>使用 <a href="https://github.com/KiviBotLab/KiviBot/blob/main/LICENSE">MPL-2.0</a> 协议开放源代码, <a href="https://github.com/KiviBotLab/docs">文档</a>使用 <a href="https://github.com/KiviBotLab/docs/blob/main/LICENSE">MIT</a> 协议开放源代码',
       copyright: 'Copyright © 2022-PRESENT <a href="https://github.com/vikiboss">Viki</a>'
     },
     lastUpdatedText: '上次更新',
