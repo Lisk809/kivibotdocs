@@ -1,19 +1,21 @@
 # 前置知识 {#prerequisite}
 
-`KiviBot` 可以使用 `JavaScript` / `TypeScript` 语言来开发插件。
+`KiviBot` 可以使用 `JavaScript` / `TypeScript` 语言来开发插件。框架最终运行的是符合 `CommonJS` 模块规范的 `node` 模块。
 
-框架最终运行的是符合 `CommonJS` 模块规范的 `JavaScript` 模块。
+在开发前, 为提高开发效率减少不必要的提问, 请确保你具备以下前置知识：
 
-在开发前, 为提高开发效率, 同时减少不必要的提问, 请确保你具备以下前置知识：
+1. 熟悉 `JavaScript` 的基本语法。
 
-1. 熟悉 `JavaScript` 的基本语法, 可前往[现代 JavaScript 教程](https://zh.javascript.info/) 的第一部分进行 `JavaScript` 语言基础的入门学习。
+> 可前往[现代 JavaScript 教程](https://zh.javascript.info/) 的语言基础部分进行入门学习。
 
 2. 熟悉 `JavaScript` 的模块化机制（`CommonJS`、`ESM`）
 
-   - `CommonJS` 模块：参考 [node 官网对 `CommonJS` 的描述](https://nodejs.org/docs/latest-v18.x/api/modules.html#modules-commonjs-modules), 插件需采用这种写法规范。
-   - `ESM` 模块：参考 [node 官网对 `ESM` 的描述](https://nodejs.org/docs/latest-v18.x/api/esm.html#introduction), `TypeScript` 遵循这种规范, 但请配置最终编译成 `CommonJS`。
+   - `CommonJS` 模块：最终运行的插件模块需遵循这种规范。
+   - `ESM` 模块：`TypeScript` 遵循这种规范, 但请配置编译成 `CommonJS`。
 
-3. 熟悉 `ES6` 的新特性（可选, 有助于提高开发效率）, 可前往[阮一峰的 ES6 入门教程](https://es6.ruanyifeng.com/), 熟悉 `const` 和 `let` 关键字, `解构赋值`, `箭头函数`, `async` 函数, `async` 和 `await` 关键字等。
+3. 熟悉 `ES6` 的新特性（可选, 有助于提高开发效率）
+
+> 可前往[阮一峰的 ES6 入门教程](https://es6.ruanyifeng.com/), 熟悉 `const` 和 `let` 关键字, `解构赋值`, `箭头函数`, `async` 函数, `async` 和 `await` 关键字等。
 
 > 大家都很忙, 如果你真的想自己开发插件, 请确保有上面这些语言基础, 不然在浪费大家时间的同时, 你自己也寸步难行。
 

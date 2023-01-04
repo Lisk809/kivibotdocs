@@ -15,4 +15,6 @@
 9. 框架删除插件的 `require` 缓存
 10. 结束
 
-> 重载命令 `/plugin reload <name>` 等同于先禁用插件，再启用插件。
+::: tip 小提示
+重载命令 `/plugin reload <name>` 等同于先禁用插件，再启用插件。
+:::

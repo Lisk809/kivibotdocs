@@ -101,6 +101,7 @@ export default defineConfig({
         items: [
           { text: 'KiviPlugin API', link: '/api/plugin' },
           { text: 'Bot API', link: '/api/bot' },
+          { text: 'Utils API', link: '/api/utils' },
           { text: 'KiviBot 标准事件', link: '/api/kivi_events' },
           { text: 'oicq v2 标准事件', link: '/api/oicq_events' }
         ]
