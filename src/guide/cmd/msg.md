@@ -10,16 +10,16 @@
 | ---------------------------- | ------------------------------------------------------------------------------- |
 | `/help`                      | 显示框架命令列表                                                                |
 | `/status`                    | 检测并上报当前机器人状态以及系统状态                                            |
-| `/plugin`                    | 查看插件相关的消息指令及其格式                                                  |
+| `/plugin` / `/p`             | 查看插件相关的消息指令及其格式                                                  |
 | `/plugin list`               | 查看本地所有检测到的插件                                                        |
 | `/plugin on <name>`          | 通过插件名启用指定插件                                                          |
-| `/plugin reload <name>`      | 通过插件名重载指定插件                                                          |
 | `/plugin off <name>`         | 通过插件名禁用指定插件                                                          |
+| `/plugin reload/rl <name>`   | 通过插件名重载指定插件                                                          |
 | `/plugin onall`              | 启用所有检索到的插件                                                            |
 | `/plugin offall`             | 禁用所有检索到的插件                                                            |
 | `/plugin add <name>`         | 安装 npm 插件                                                                   |
-| `/plugin up <?name>`         | 更新 npm 插件                                                                   |
-| `/plugin rm <?name>`         | 卸载 npm 插件                                                                   |
+| `/plugin update/up <?name>`  | 更新 npm 插件                                                                   |
+| `/plugin rm/remove <?name>`  | 卸载 npm 插件                                                                   |
 | `/config`                    | 查看框架设置消息指令及其格式                                                    |
 | `/config detail`             | 查看框架详细设置                                                                |
 | `/config admin add <qq>`     | 添加机器人管理并立即生效                                                        |
