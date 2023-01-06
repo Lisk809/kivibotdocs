@@ -121,7 +121,7 @@ export declare function randomInt(min: number, max: number): number
 /**
  * 取数组内随机一项
  * @param {Array<T>} array 待操作数组
- * @return {T} 随机范围内的整数
+ * @return {T} 数组内的随机一项
  */
 export declare function randomItem<T = any>(array: [T, ...T[]]): T
 ```
