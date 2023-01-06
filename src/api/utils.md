@@ -1,6 +1,6 @@
 # Utils API {#utils-api}
 
-除了 `KiviPlugin` 中封装了一些常用的用于消息处理的 API 之外, 框架的核心库 `@kivibot/core` 中也提炼并导出了**一系列常用的实用函数**, **属性**和 **TS 类型声明**等, 用来减少重复代码, 提高插件的开发效率。
+除了 `KiviPlugin` 中封装了一些常用的消息处理 API 之外, 框架的核心库 `@kivibot/core` 也根据实际开发的反馈, 提炼并导出了一系列常用的**实用函数**, **属性**和 **TS 类型声明**等, 用来减少重复代码, 提高插件的开发效率。
 
 ## oicq 库中的所有导出
 
@@ -36,7 +36,7 @@ export const PluginDataDir = path.join(CWD, 'data/plugins')
 
 ## axios/http
 
-框架内置了 axios, 如果你也习惯使用 axios 发起请求, 你可以引入使用 axios 简单封装过的 http, 或者直接引入 axiox, 无需额外安装 axios。
+框架内置了 axios, 如果你也习惯使用 axios 发起请求, 你可以引入使用 axios 简单封装过的 http, 或者直接引入 axios, 无需额外安装 axios。
 
 > 你可以前往 [GitHub](https://github.com/KiviBotLab/KiviBot/blob/main/src/utils/request.ts) 查看 http 的简单封装源码。
 
