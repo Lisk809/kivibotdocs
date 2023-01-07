@@ -4,15 +4,13 @@
 
     <div class="search">
       <div>
-        共计 {{ word ? pkgs.length + ' / ' : '' }}{{ plugins.total }} 个 npm 插件，来自 {{ developers.size }} 个开发者
+        共计 {{ word? pkgs.length + ' / ' : '' }}{{ plugins.total }} 个 npm 插件，来自 {{ developers.size }} 个开发者
       </div>
       <input type="text" class="search__input" placeholder="通过插件名、介绍、作者进行搜索" v-model="word" />
     </div>
 
     <div class="packages">
-      <div class="card" v-for="pkg in pkgs" :key="pkg.name">
-        <Package :pkg="pkg" />
-      </div>
+      <Package :pkg="pkg" v-for="pkg in pkgs" :key="pkg.name" />
     </div>
   </div>
 
@@ -28,7 +26,9 @@
 
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
+
 import Package from '../../components/Package.vue'
+import { getName, isHighQuality, isOfficial } from "../../utils";
 
 import type { PackageInfo } from '../../components/Package.vue'
 
@@ -55,19 +55,34 @@ const pkgs = computed(() => {
     return []
   }
 
-  const ps = plugins.value.objects.filter((pkg: { package: PackageInfo }) => {
-    const isName = pkg.package.name.includes(word.value.toLowerCase())
-    const isDescription = pkg.package.description.includes(word.value.toLowerCase())
-    const isAuthor = pkg.package.publisher.username.includes(word.value.toLowerCase())
 
-    return isName || isDescription || isAuthor
+  const ps = plugins.value.objects.filter((pkg: { package: PackageInfo }) => {
+    const kw = word.value.toLowerCase()
+
+    const hitName = pkg.package.name.includes(kw)
+    const hitDescription = pkg.package.description.includes(kw)
+    const hitAuthor = getName(pkg.package).toLowerCase().includes(kw)
+
+    return hitName || hitDescription || hitAuthor
+  })
+
+
+  // ps.filter(e => e)
+
+  ps.forEach(e => {
+    const desc = e.package.description.replace(/kivi\s*bot/gi, 'KiviBot')
+
+    e.package.description = desc
   })
 
   ps.sort((a, b) => a.score.final - b.score.final)
 
   ps.sort((e: { package: PackageInfo }) => {
-    const isOfficial = e.package.publisher.username === 'vikiboss'
-    return isOfficial ? 1 : -1
+    return isHighQuality(e.package) ? -1 : 1
+  })
+
+  ps.sort((e: { package: PackageInfo }) => {
+    return isOfficial(e.package) ? 1 : -1
   })
 
   ps.sort((e: { package: PackageInfo }) => {
@@ -79,7 +94,9 @@ const pkgs = computed(() => {
 })
 
 const developers = computed(() => {
-  return new Set(pkgs.value.map(e => (e.author?.name || e.publisher.username).toLowerCase()))
+  const names = pkgs.value.map(e => getName(e).toLowerCase())
+
+  return new Set(names)
 })
 
 </script>
@@ -94,6 +111,10 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  .card {
+    width: 100%;
+  }
 }
 
 .search {
@@ -128,7 +149,7 @@ h1 {
 
 @media (max-width: 712px) {
   .packages {
-    width: 100%;
+    width: 88vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

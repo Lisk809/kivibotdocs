@@ -6,23 +6,25 @@
         <span :class="`label ${pkg.version === '0.0.0' ? 'wip' : ''}`">
           {{ pkg.version === '0.0.0' ? '开发中' : `v${pkg.version}` }}
         </span>
-        <span class="label official" v-if="pkg.publisher.username === 'vikiboss'">官方插件</span>
+        <span class="label official" v-if="isOfficial(pkg)">官方插件</span>
+        <span class="label high-quality" v-if="isHighQuality(pkg)">社区优质插件</span>
+        <span class="label community" v-if="!isHighQuality(pkg) && !isOfficial(pkg)">社区插件</span>
       </h3>
       <p>{{ pkg.description }}</p>
     </div>
 
     <div class="footer">
       <span title="发布时间">{{ new Date(pkg.date).toLocaleString() }}</span>
-      <div :title="pkg.author?.name || pkg.publisher.username">
+      <div :title="getName(pkg)">
         <img class="avatar" :src="getAvatar(pkg.publisher.email)" />
-        <span>{{ pkg.author?.name || pkg.publisher.username }}</span>
+        <span>{{ getName(pkg) }}</span>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import md5 from 'spark-md5'
+import { getName, isOfficial, isHighQuality, getAvatar } from '../utils'
 
 export interface PackageInfo {
   name: string;
@@ -57,9 +59,7 @@ const { pkg } = defineProps<{ pkg: PackageInfo }>()
 
 
 
-function getAvatar(email: string) {
-  return `https://gravatar.deno.dev/avatar/${email ? md5.hash(email) : ''}?d=mp`
-}
+
 
 function handleOpen(link: string) {
   window.open(link)
@@ -77,8 +77,9 @@ function handleOpen(link: string) {
   height: 200px;
   justify-content: space-between;
   margin: 12px 8px;
-  max-width: 400px;
-  min-width: 400px;
+  width: 32vw;
+  min-width: 360px;
+  max-width: 480px;
   padding: 8px 12px;
   transition: all 0.2s ease-in-out;
   overflow: hidden;
@@ -103,6 +104,14 @@ function handleOpen(link: string) {
 
     .official {
       background-color: #00b782;
+    }
+
+    .high-quality {
+      background-color: #fe7c7c;
+    }
+
+    .community {
+      background-color: #00bfdc;
     }
 
     .wip {
@@ -141,8 +150,10 @@ function handleOpen(link: string) {
 @media (max-width: 712px) {
   .pkg {
     height: 200px;
-    max-width: 300px;
-    min-width: 300px;
+    max-width: 88vw;
+    min-width: 88vw;
+
+    margin: 16px 0 0 0;
 
     p {
       max-height: 84px;
