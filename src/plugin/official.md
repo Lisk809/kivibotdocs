@@ -23,5 +23,6 @@
 - [关键词](https://github.com/KiviBotLab/kivibot-plugin-keyword), 插件标识：`keyword`, 提供基础的关键匹配回复功能
 - [自爆](https://github.com/KiviBotLab/kivibot-plugin-bang), 插件标识：`bang`, 提供创意的娱乐性禁言功能
 - [OG图](https://github.com/KiviBotLab/kivibot-plugin-og), 插件标识：`og`, 检测到链接自动发送分享图
+- [插件提醒](https://github.com/KiviBotLab/kivibot-plugin-plugin-notice), 插件标识：`plugin-notice`, 插件变动（新增、更新）提醒
 
 > 开发不易, 点个 star 就是对我们日夜付出的最大支持。
