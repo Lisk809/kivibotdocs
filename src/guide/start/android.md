@@ -4,6 +4,8 @@
 
 到 [GitHub](https://github.com/termux/termux-app/releases) 下载 Termux 的 APK 安装包, 优先选择 `arm64-v8a` 版本, 不可用再尝试使用其他版本。
 
+> 如果 GitHub 打不开或者下载速度太慢，可以到[交流群](https://jq.qq.com/?_wv=1027&k=iK97X7NS)的群文件下载。
+
 ## 配置 Termux 国内镜像源
 
 可以使用如下命令自动替换官方源为阿里云镜像源，命令来自[阿里云镜像站](https://developer.aliyun.com/mirror/termux)。
