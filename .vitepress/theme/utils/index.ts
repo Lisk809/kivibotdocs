@@ -14,7 +14,7 @@ export function isOfficial(pkg: any) {
 
 export function isHighQuality(pkg: any) {
   const niceAuthors = ['linxae', 'hezhihang', 'sioncovy', 'ginirohikocha']
-  const nicePlugins = ['helper', 'listener', 'mmcard', 'forward', 'title']
+  const nicePlugins = ['helper', 'forward']
 
   const isHQAuthor = niceAuthors.includes(pkg.publisher.username)
   const isHQPlugin = nicePlugins.includes(pkg.name.replace('kivibot-plugin-', ''))
