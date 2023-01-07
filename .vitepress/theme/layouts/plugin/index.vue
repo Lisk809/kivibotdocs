@@ -6,7 +6,7 @@
       <div>
         共计 {{ word? pkgs.length + ' / ' : '' }}{{ plugins.total }} 个 npm 插件，来自 {{ developers.size }} 个开发者
       </div>
-      <input type="text" class="search__input" placeholder="通过插件名、介绍、作者进行搜索" v-model="word" />
+      <input type="text" class="search__input" placeholder="通过插件的标识、介绍、作者进行搜索" v-model="word" />
     </div>
 
     <div class="packages">
