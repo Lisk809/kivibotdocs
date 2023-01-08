@@ -1,10 +1,10 @@
 <template>
-  <div v-if="plugins.total">
+  <div v-if="plugins.objects.length">
     <h1>KiviBot Beta 插件列表</h1>
 
     <div class="search">
       <div>
-        共计 {{ word? pkgs.length + ' / ' : '' }}{{ plugins.total }} 个 npm 插件，来自 {{ developers.size }} 个开发者
+        共计 {{ word? pkgs.length + ' / ' : '' }}{{ plugins.objects.length }} 个 npm 插件，来自 {{ developers.size }} 个开发者
       </div>
       <input type="text" class="search__input" placeholder="通过插件的标识、介绍、作者进行搜索" v-model="word" />
     </div>
@@ -28,7 +28,7 @@
 import { computed, onMounted, ref } from 'vue'
 
 import Package from '../../components/Package.vue'
-import { getName, isHighQuality, isOfficial } from "../../utils";
+import { getName, isBlack, isHighQuality, isOfficial } from "../../utils";
 
 import type { PackageInfo } from '../../components/Package.vue'
 
@@ -41,7 +41,11 @@ onMounted(async () => {
   try {
     const api = 'https://registry.npmjs.org/-/v1/search?text=kivibot-plugin&size=250'
     const res = await fetch(api)
-    plugins.value = await res.json()
+    const data = await res.json()
+
+    data.objects = data.objects.filter((p: any) => !isBlack(p.package))
+
+    plugins.value = data
 
   } catch (err) {
     error.value = err
@@ -59,15 +63,14 @@ const pkgs = computed(() => {
   const ps = plugins.value.objects.filter((pkg: { package: PackageInfo }) => {
     const kw = word.value.toLowerCase()
 
+
     const hitName = pkg.package.name.includes(kw)
     const hitDescription = pkg.package.description.includes(kw)
     const hitAuthor = getName(pkg.package).toLowerCase().includes(kw)
 
-    return hitName || hitDescription || hitAuthor
+    return (hitName || hitDescription || hitAuthor)
   })
 
-
-  // ps.filter(e => e)
 
   ps.forEach(e => {
     const desc = e.package.description.replace(/kivi\s*bot/gi, 'KiviBot')
