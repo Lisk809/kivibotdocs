@@ -113,7 +113,7 @@
     // 被风控时是否尝试用分片发送, 默认 true, 不发送分片请设置为 false
     "resend": true,
 
-    // 指定 ffprobe 路径
+    // 指定 ffmpeg 路径
     "ffmpeg_path": "ffmpeg",
 
     // 指定 ffprobe 路径
