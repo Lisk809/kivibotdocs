@@ -68,27 +68,28 @@ plugin.onMounted((bot, admins) => {
 })
 ```
 
-## 随机的相关功能
+## 随机数或随机项
 
 可以使用框架内置的 `randomInt` 和 `randomItem` 减少重复代码。
 
 > 你可以参考 [Utils API](/api/utils#randomint) 了解更多。
 
 ```js
-const { KiviPlugin, http } = require('@kivibot/core')
+const { KiviPlugin, segment, randomItem, randomInt } = require('@kivibot/core')
 
-const plugin = new KiviPlugin('一言', '1.0.0')
+const plugin = new KiviPlugin('骰子', '1.0.0')
+
+const nums = [1, 2, 3, 4, 5, 6]
 
 plugin.onMounted((bot, admins) => {
   plugin.onMessage(event => {
     const { raw_message } = event
 
-    if (raw_message === '一言') {
-      const { data } = http.get('https://v1.hitokoto.cn')
+    if (raw_message === '扔骰子') {
+      const n = randomItem(nums) // 或使用 const n = randomInt(1, 6)
+      const msg = segment.dice(n)
 
-      plugin.log(data)
-
-      event.reply(data.hitokoto)
+      event.reply(msg)
     }
   })
 })
