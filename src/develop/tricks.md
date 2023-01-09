@@ -37,11 +37,11 @@ const { KiviPlugin, http } = require('@kivibot/core')
 const plugin = new KiviPlugin('一言', '1.0.0')
 
 plugin.onMounted((bot, admins) => {
-  plugin.onMessage(event => {
+  plugin.onMessage(async event => {
     const { raw_message } = event
 
     if (raw_message === '一言') {
-      const { data } = http.get('https://v1.hitokoto.cn')
+      const { data } = await http.get('https://v1.hitokoto.cn')
 
       plugin.log(data)
 
