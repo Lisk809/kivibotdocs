@@ -50,8 +50,8 @@ module.exports = { plugin }
 
 可以看到，你需要先初始化插件实例，然后调用相关的插件 API 进行处理。
 
-> 这里的 `plugin.onMounted`, `plugin.onMessage` 等, 都是插件类提供的 API, 你可以前往 [KiviPlugin API](/api/plugin) 查看所有支持的 API 和相关参数、类型说明。
+> 这里的 `plugin.onMounted()`, `plugin.onMessage()` 等, 都是插件类提供的 API, 你可以前往 [KiviPlugin API](/api/plugin) 查看所有支持的 API 和相关参数、类型说明。
 
-需要注意的是, 只有在 `plugin.onMounted` 中才能访问到 Bot 的相关属性和方法, 所以请把与 Bot 相关的业务逻辑都写在 `plugin.onMounted` 传入的函数中。
+需要注意的是, 只有在 `plugin.onMounted()` 中才能访问到 Bot 的相关属性和方法, 所以请把与 Bot 相关的业务逻辑都写在 `plugin.onMounted()` 传入的函数中。
 
 > 逐步完善中，敬请期待...

@@ -396,13 +396,11 @@ plugin.onMounted(() => {
 **返回值**: `node-cron` 的 `Task` 实例, 可以调用其上的 `stop` 方法取消定时任务。
 
 ```ts
-plugin.onMounted(() => {
+plugin.onMounted((bot, admins) => {
   // 每 3 秒钟触发
-  const task = plugin.cron('*/3 * * * * *', (bot, admins) /** [!code focus] */ => {
-    admins.forEach((admin) /** [!code focus] */ => {
-      bot.sendPrivateMsg(admin, 'cron trigger!') // [!code focus]
-    }) // [!code focus]
-  }) // [!code focus]
+  const task = plugin.cron('*/3 * * * * *', () => {
+    bot.pickFriend(plugin.mainAdmin).sendMsg('cron trigger!')
+  })
 
   // task.stop()
 })
