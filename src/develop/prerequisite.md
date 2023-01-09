@@ -5,6 +5,7 @@
 在开发前, 为了提高你的开发效率, 同时减少不必要的提问节约大家时间, 请确保你具备以下前置知识：
 
 **1. 熟悉 `JavaScript` 的基本语法和 `Node.js` 的基础知识**
+
 可前往[现代 JavaScript 教程](https://zh.javascript.info/)进行语言基础部分的入门学习和巩固。可前往 [Node.js 官方文档](https://nodejs.org/zh-cn/docs/)了解 node 的相关知识。
 
 **2. 熟悉 `JavaScript` 的模块化机制（`CommonJS`、`ESM`）**
