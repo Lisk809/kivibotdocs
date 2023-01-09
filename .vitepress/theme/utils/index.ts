@@ -41,5 +41,6 @@ export function isBlackPlugin(pkg: any) {
 }
 
 export function isBlack(pkg: any) {
-  return isBlackAuthor(pkg) || isBlackPlugin(pkg)
+  const isKiviPlugin = pkg.name.startsWith('kivibot-plugin-')
+  return !isKiviPlugin || isBlackAuthor(pkg) || isBlackPlugin(pkg)
 }
