@@ -1,6 +1,6 @@
 # 插件生命周期 {#plugin-lifecycle}
 
-完善中, 可先参考 [`KiviPlugin API`](/api/plugin)
+> 逐步完善中, 可先参考 [`KiviPlugin API`](/api/plugin)
 
 一个插件的完整周期：
 
