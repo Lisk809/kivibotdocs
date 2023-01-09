@@ -51,7 +51,7 @@ const { KiviPlugin, segment } = require('@kivibot/core')
 
 const plugin = new KiviPlugin('demo', '0.1.0')
 
-plugin.onMounted(() => {
+plugin.onMounted((bot, admins) => {
   plugin.onMessage(event => {
     const { raw_message } = event
 
