@@ -49,7 +49,6 @@
 - [`request.group`](https://oicqjs.github.io/oicq/interfaces/EventMap.html#request_group)
 - [`request.group.add`](https://oicqjs.github.io/oicq/interfaces/EventMap.html#request_group_add)
 - [`request.group.invite`](https://oicqjs.github.io/oicq/interfaces/EventMap.html#request_group_invite)
--
 
 ## sync
 
