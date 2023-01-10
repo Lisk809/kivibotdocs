@@ -19,7 +19,7 @@
 ```js
 plugin.onMounted(() => {
   plugin.on('kivi.admin', admins => {
-    plugin.log('框架管理员更新了，新管理员列表: ' + admins.join(', '))
+    plugin.log('框架管理员更新: ' + admins.join(', '))
   })
 })
 ```
