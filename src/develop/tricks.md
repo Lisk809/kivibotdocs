@@ -119,15 +119,16 @@ plugin.onMounted((bot, admins) => {
   // 插件 mount 后，绑定 oicq Client 获取频道实例
   const app = GuildApp.bind(bot)
 
-  // 通过频道实例监听并处理相关事件，详情参考 oicq-guild 说
+  // 通过频道实例监听并处理相关事件，详情参考 oicq-guild 说明
+
+  // 频道实例初始化完成
   app.on('ready', function () {
-    // 频道实例初始化完成
     plugin.log('My guild list:')
     plugin.log(this.guilds)
   })
 
+  // 监听处理频道消息
   app.on('message', e => {
-    // 处理频道消息
     plugin.log(e)
 
     if (e.raw_message === 'hello') {
