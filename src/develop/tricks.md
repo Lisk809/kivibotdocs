@@ -17,7 +17,7 @@ const img = segment.image('https://beta.kivibot.com/dimo.png')
 
 // QQ 表情消息, 如果不知道表情 id, 可以在 kivi.json 里配置 message_mode 为 detail
 // 重开框架后，把表情发给 Bot, 就可以在 log 里看到表情 id
-const record = segment.face(66)
+const face = segment.face(66)
 
 // 语音消息
 const record = segment.record('https://xxx.xxx/xxx.mp3')
@@ -29,7 +29,7 @@ const record = segment.record('https://xxx.xxx/xxx.mp3')
 
 可以使用框架内置的 `axios` 或者简单封装过的 `http` 发起网络请求。
 
-> 你可以参考 [Utils API](/api/utils#axios-http) 了解更多, 也可以前往 [GitHub](https://github.com/KiviBotLab/KiviBot/blob/main/src/utils/request.ts) 查看 http 的简单封装源码。
+> 你可以参考 [Utils API](/api/utils#axios-http) 了解更多, 也可以前往 [GitHub](https://github.com/KiviBotLab/KiviBot/blob/main/src/utils/request.ts) 查看 http 的简单封装源码。当然你可以自己安装其他熟悉的请求库。
 
 ```js
 const { KiviPlugin, http } = require('@kivibot/core')
@@ -86,7 +86,9 @@ plugin.onMounted((bot, admins) => {
     const { raw_message } = event
 
     if (raw_message === '扔骰子') {
-      const n = randomItem(nums) // 或使用 const n = randomInt(1, 6)
+      // 或使用 const n = randomInt(1, 6)
+      const n = randomItem(nums)
+
       const msg = segment.dice(n)
 
       event.reply(msg)
