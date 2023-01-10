@@ -44,7 +44,9 @@ plugin.onMounted((bot, admins) => {
     const { raw_message } = event
 
     if (raw_message === '扔骰子') {
-      const n = randomItem(nums) // 或使用 const n = randomInt(1, 6)
+      // 或使用 const n = randomInt(1, 6)
+      const n = randomItem(nums)
+
       const msg = segment.dice(n)
 
       event.reply(msg)
