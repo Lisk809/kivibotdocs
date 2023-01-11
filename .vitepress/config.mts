@@ -8,7 +8,7 @@ export default defineConfig({
     ['link', { rel: 'preconnect', href: 'https://unpkg.com' }],
     ['link', { rel: 'dns-prefetch', href: 'https://unpkg.com' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/dimo.png' }],
-    ['script', { src: 'https://unpkg.com/twemoji@14.0.2/dist/twemoji.min.js' }]
+    ['script', { src: 'https://unpkg.com/twemoji@latest/dist/twemoji.min.js' }]
   ],
   lastUpdated: true,
   markdown: {
