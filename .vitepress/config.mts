@@ -95,9 +95,9 @@ export default defineConfig({
         items: [
           { text: '前置知识', link: '/develop/prerequisite' },
           { text: '开发指引', link: '/develop/guide' },
-          { text: '插件生命周期', link: '/develop/lifecycle' },
           { text: '开发技巧', link: '/develop/tricks' },
-          { text: '插件示例', link: '/develop/examples' }
+          { text: '插件示例', link: '/develop/examples' },
+          { text: '生命周期', link: '/develop/lifecycle' }
         ]
       },
       {
