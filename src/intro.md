@@ -14,7 +14,7 @@
 框架仍处于**测试阶段**, 可能会有潜在 `bug`, 框架文档也正在完善中, 敬请期待。
 :::
 
-`KiviBot` 是使用 [TypeScript](https://www.typescriptlang.org/) 语言编写的**轻量**、**优雅**、**跨平台**、**开发者友好**的 QQ 机器人框架。
+`KiviBot` 是使用 [TypeScript](https://www.typescriptlang.org/) 语言编写的**轻量**、**优雅**、**跨平台**、**开发者友好**、**能跑就行**的 QQ 机器人框架。
 
 框架提供了完备的状态监控、插件管理（支持热更新）、主副管理员机制、消息通知、请求处理功能以及友好的脚手架, 开箱即用。框架完全开源, 可扩展性强, 插件开发简单, 核心底层协议使用 [oicq](https://github.com/takayama-lily/oicq) v2, API 众多, 功能强大。另外, 框架使用 [node](https://nodejs.org/) 驱动, 得益于 node 及其高效的 v8 引擎, KiviBot 的性能可观。
 

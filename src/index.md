@@ -1,11 +1,11 @@
 ---
 layout: home
-titleTemplate: QQ 机器人框架
-description: 轻量、优雅、跨平台、开发者友好的 QQ 机器人框架
+titleTemplate: 能跑就行的 QQ 机器人框架
+description: 轻量、优雅、跨平台、开发者友好、能跑就行的 QQ 机器人框架
 head:
   - - meta
     - name: description
-      content: 轻量、优雅、跨平台、开发者友好的 QQ 机器人框架
+      content: 轻量、优雅、跨平台、开发者友好、能跑就行的 QQ 机器人框架
   - - meta
     - name: keywords
       content: KiviBot,kivibot,QQ机器人,机器人框架,机器人,bot
