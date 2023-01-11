@@ -1,12 +1,12 @@
 # 在 Linux 平台使用 KiviBot {#linux}
 
-## 安装 Node.js
+## 安装 Node.js {#install-nodejs}
 
 使用对应的包管理器, 或者到 [node 官网](https://nodejs.org/)进行下载安装, 建议使用 18 版本, 最低不得低于 14 版本。**需要配置好环境变量**(包括 `NODE_HOME` 变量), 以确保命令行能够正常访问 `node` 和 `npm` 命令。
 
 > 当然你也可以使用诸如 `nvm`, `n` 等 node 版本管理器进行安装。
 
-## 全局安装 KiviBot CLI
+## 全局安装 KiviBot CLI {#install-kivibot}
 
 ```shell
 npm i -g kivibot@latest
@@ -20,7 +20,7 @@ npm i -g kivibot@latest
 npm i -g kivibot@latest --registry https://registry.npmmirror.com
 ```
 
-## 通过 CLI 引导生成配置文件
+## 通过 CLI 引导生成配置文件 {#generate-config}
 
 ```shell
 # 创建空目录作为框架目录, 并切换到这个目录
@@ -29,7 +29,7 @@ mkdir ~/bot && cd ~/bot
 kivi init
 ```
 
-## 启动 KiviBot
+## 启动 KiviBot {#start-kivibot}
 
 ```shell
 kivi start
@@ -37,7 +37,7 @@ kivi start
 
 > 如果发现二维码显示异常, 可能是由于终端字体不兼容导致的, 请尝试手动打开 `框架目录/data/oicq/[qq]` 目录下的二维码图片进行扫码。（有效期大约两分钟）
 
-## 后台部署（可选）
+## 后台部署（可选） {#deploy-kivibot}
 
 ```shell
 kivi deploy
