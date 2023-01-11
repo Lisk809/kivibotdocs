@@ -4,7 +4,12 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'KiviBot',
   description: '轻量、跨平台的 QQ 机器人框架',
-  head: [['link', { rel: 'icon', type: 'image/png', href: `/dimo.png` }]],
+  head: [
+    ['link', { rel: 'preconnect', href: 'https://unpkg.com' }],
+    ['link', { rel: 'dns-prefetch', href: 'https://unpkg.com' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/dimo.png' }],
+    ['script', { src: 'https://unpkg.com/twemoji@14.0.2/dist/twemoji.min.js' }]
+  ],
   lastUpdated: true,
   markdown: {
     theme: 'one-dark-pro'
