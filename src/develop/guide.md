@@ -6,7 +6,7 @@
 
 **使用插件模板（推荐）**
 
-你可以使用 `kivi crate` 脚手架命令，它会在 `框架目录/plugins` 下生成模板。
+你可以使用 `kivi create` 脚手架命令，它会在 `框架目录/plugins` 下生成模板。
 
 > 如果你对 TS 很熟悉，这里有一个[开箱即用的 TS 插件开发模板](https://github.com/KiviBotLab/kivibot-plugin-template-ts)，也许对你有帮助。
 
