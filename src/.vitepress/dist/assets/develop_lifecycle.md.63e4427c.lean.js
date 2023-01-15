@@ -1,1 +1,0 @@
-import{_ as e,c as o,o as l,e as i}from"./app.cab4e725.js";const f=JSON.parse('{"title":"插件生命周期","description":"","frontmatter":{},"headers":[],"relativePath":"develop/lifecycle.md","lastUpdated":1673416769000}'),c={name:"develop/lifecycle.md"},t=i("",5),d=[t];function n(a,p,s,r,_,u){return l(),o("div",null,d)}const g=e(c,[["render",n]]);export{f as __pageData,g as default};

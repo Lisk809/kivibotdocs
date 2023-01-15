@@ -1,0 +1,1 @@
+import{_ as t,c as o,o as e,e as i}from"./app.531fdd6f.js";const m=JSON.parse('{"title":"基础知识","description":"","frontmatter":{},"headers":[],"relativePath":"guide/basic.md","lastUpdated":1672804576000}'),a={name:"guide/basic.md"},r=i("",12),s=[r];function c(p,n,d,l,h,g){return e(),o("div",null,s)}const u=t(a,[["render",c]]);export{m as __pageData,u as default};
