@@ -1,7 +1,6 @@
 # Anemo 简介 {#Anemo}
 
 [![npm-version](https://img.shields.io/npm/v/@anemo/core?color=527dec&label=%40anemo%2Fcore&style=flat-square)](https://npm.im/package/@anemo/core)
-[![dm](https://shields.io/npm/dm/@anemo/core?label=downloads&style=flat-square)](https://npm.im/package/@anemo/core)
 
 [![npm-version](https://img.shields.io/npm/v/anemo?color=527dec&label=anemo%20(cli)&style=flat-square)](https://npm.im/package/anemo)
 [![dm](https://shields.io/npm/dm/anemo?label=downloads&style=flat-square)](https://npm.im/package/anemo)
