@@ -14,7 +14,6 @@ export default defineConfig({
   markdown: {
     theme: 'one-dark-pro'
   },
-  base:"/kivibotdocs/",
   themeConfig: {
     logo: '/dimo.png',
     nav: [
