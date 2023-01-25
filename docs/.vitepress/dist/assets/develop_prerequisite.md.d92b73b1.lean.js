@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as c,e as d}from"./app.a9f38e6a.js";const m=JSON.parse('{"title":"前置知识","description":"","frontmatter":{},"headers":[],"relativePath":"develop/prerequisite.md","lastUpdated":null}'),t={name:"develop/prerequisite.md"},r=d("",10),a=[r];function n(p,s,i,_,l,S){return c(),o("div",null,a)}const u=e(t,[["render",n]]);export{m as __pageData,u as default};

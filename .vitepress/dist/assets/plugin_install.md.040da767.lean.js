@@ -1,0 +1,1 @@
+import{_ as e,c as t,o,e as l}from"./app.a9f38e6a.js";const m=JSON.parse('{"title":"安装插件","description":"","frontmatter":{},"headers":[],"relativePath":"plugin/install.md","lastUpdated":null}'),i={name:"plugin/install.md"},a=l("",7),n=[a];function c(d,s,p,r,_,u){return o(),t("div",null,n)}const h=e(i,[["render",c]]);export{m as __pageData,h as default};
