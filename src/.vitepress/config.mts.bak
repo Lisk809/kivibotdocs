@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Anemo',
-  description: '轻量，更快，更强大的跨平台QQ机器人框架',
+  description: '轻量，更快，更强大的跨平台 QQ 机器人框架',
   head: [
     ['link', { rel: 'preconnect', href: 'https://unpkg.com' }],
     ['link', { rel: 'dns-prefetch', href: 'https://unpkg.com' }],

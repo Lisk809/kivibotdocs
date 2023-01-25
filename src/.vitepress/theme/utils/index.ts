@@ -26,7 +26,7 @@ export function isHighQuality(pkg: any) {
 
 export function getAvatar(email: string) {
   if (!email) {
-    return 'http://beta.kivibot.com/dimo.png'
+    return 'http://beta.kivibot.com/anemo.png'
   }
 
   return `https://gravatar.deno.dev/avatar/${md5.hash(email)}?d=mp`

@@ -7,7 +7,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'preconnect', href: 'https://unpkg.com' }],
     ['link', { rel: 'dns-prefetch', href: 'https://unpkg.com' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/dimo.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/anemo.png' }],
     ['script', { src: 'https://unpkg.com/twemoji@latest/dist/twemoji.min.js' }]
   ],
   lastUpdated: true,
@@ -15,7 +15,7 @@ export default defineConfig({
     theme: 'one-dark-pro'
   },
   themeConfig: {
-    logo: '/dimo.png',
+    logo: '/anemo.png',
     nav: [
       { text: '文档', link: '/intro' },
       { text: '插件', link: '/plugin/list' },
